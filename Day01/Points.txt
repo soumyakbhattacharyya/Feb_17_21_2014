@@ -1,0 +1,50 @@
+Html Engine
+	Layout engine
+	processes HTML and CSS
+	Safari (Webkit)
+	Chrome (Blink)
+	IE (Trident)
+	Firefox (Gecko)
+JS engine
+	JS interpreter
+	Chrome (Node)
+	Safari (SpiderMonkey)				
+
+Web Server
+	File throwing software
+	
+
+Apple
+Facebook
+Amazon
+Quora digest
+w3schools
+myntra
+bookmyshow
+android
+irctc
+makemytrip
+cleartrip
+jabong
+
+
+AJAX
+Web 2.0
+Cloud
+JavaScript
+JavaScript toolkits
+Responsive web design
+Native apps
+Mobile web apps
+Mobile platforms
+CSS
+HTML5
+Browser
+Web server
+Application server
+HTML engine
+
+
+Spring 3.0 Black Book
+Practical Ext JS 4
+https://github.com/prabhu-durasoft/Feb_17_21_2014
