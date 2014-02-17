@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+			<script>
+//				var test1 = parseInt("  3534");
+//				var test2 = parseInt("100");
+//				alert(test1 + test2);
+				
+				function add(){
+					var num1tb = document.getElementById('num1');
+					var num2tb = document.getElementById('num2');
+					var num1 = num1tb.value;
+					var num2 = num2tb.value;
+					var sum = Number.parseInt(num1) + Number.parseInt(num2);
+					var messageSection = document.getElementById("message");
+					messageSection.innerHTML = "Sum: " + sum;
+				}
+			</script>
+	</head>
+	<body>
+		<section>
+				Num1<input type="number" id="num1" min="1" max="100"><br/>
+				Num2<input type="number" id="num2" min="1" max="100"><br/>
+				<input type="button" value="Add" onclick="add();">
+		</section>
+		<section id="message"></section>
+	</body>
+</html>
