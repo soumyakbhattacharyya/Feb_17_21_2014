@@ -1,3 +1,9 @@
+JS —> Is a prog. language like Java
+	Sencha Touch, jQM -> collection of JS code; (or JS librar)
+MVC -> a way by which you can write maintainable code in any prog. lang
+DOM -> An API used to manipulate the TREE
+
+
 Html Engine
 	Layout engine
 	processes HTML and CSS
