@@ -1,0 +1,18 @@
+Create an array of the following languages;
+Tamil, Hindi, English, Urdu, Kannada,French 
+
+Compute the length of each language and store it in a new array as;
+“Tamil” = 5;
+“English” = 7;
+…
+Print the result array in the following format
+
+Tamil(5)
+English(7)
+Hindi(5)
+…
+
+
+Check if the number is even or odd and construct an array with the result.
+The array will have values
+

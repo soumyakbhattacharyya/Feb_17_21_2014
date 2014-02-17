@@ -1,3 +1,22 @@
+var countries = [];
+countries["India"] = "New Delhi";
+countries["US"] = "Washington DC";
+countries["UK"] = "London";
+
+for(var item in countries){
+	console.log(item + ", " + 
+		countries[item]);
+}
+
+/*for(var i=0;countries.length;i++){
+	console.log(countries[i]);
+}*/
+console.log("****************************");
+
+
+var something = [1,"Hello",true,"Cool",3.14,undefined];
+
+
 var arr1 = [];
 var arr2 = ["Java","C#","Ruby"];
 console.log(arr2[0]);
