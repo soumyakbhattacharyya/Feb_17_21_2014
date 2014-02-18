@@ -1,0 +1,26 @@
+CSS
+
+selector:pseudo-selector {
+	property : value;
+}
+selectors
+.class
+#id
+X Y  (All the children/grandchildren of type Y inside X)
+X > Y(All children of type Y inside X)
+
+pseudo selectors (:)
+
+:first-child
+:last-child
+:nth-child
+:active
+:hover
+:visited
+
+
+
+
+
+
+property-->font(font-weight,font-size,font-style,font-family), color, background, dimensions, margin, position, display, border
