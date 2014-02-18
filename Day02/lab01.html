@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script>
+			var target = parseInt(Math.random() * 100);
+			var attempts = 0;
+			var message = "";
+			function play(guess){
+				attempts++;
+				if(guess > target)
+					message = "Aim Lower";
+				else if(guess < target)
+					message = "Aim Higher";
+				else{
+					message = "You've got it!!!";
+				}
+			}
+			function playButtonClicked(){
+				var guess = parseInt(document.getElementById("guesstext").value);
+				play(guess);
+				document.getElementById("messagesection").innerHTML = message;
+				document.getElementById("attemptssection").innerHTML = "Attempts: " + attempts;
+			}
+		</script>
+	</head>
+	<body>
+			<section>
+					Guess <input type="number" min="1" max="100" id="guesstext"><br/>
+					<input type="button" value="Play" onclick="playButtonClicked();">
+			</section>
+			<section id="messagesection"></section>
+			<section id="attemptssection"><section>
+	</body>
+
+
+
+
+
+
+
+
+
+
+</html>
