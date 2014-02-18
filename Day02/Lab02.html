@@ -1,0 +1,53 @@
+<html>
+	<head>
+		<script>
+			var employees = [];
+			function addEmployee(empId,empLocation){
+				employees[empId] = empLocation;
+			}
+			function displayEmployees(){
+				var table = "<table border='1'>";
+				table += "<thead><tr><th>Id</th><th>Location</th></tr></thead>";
+				table += "<tbody>";
+				for(var item in employees){
+					var row = "<tr>";
+					row += "<td>" + item + "</td>";
+					row += "<td>" + employees[item] + "</td>";
+					row += "</tr>";
+					table += row;
+				}
+				table += "</tbody>";
+				table += "</table>";
+				document.getElementById('results').innerHTML = table;
+			}
+			function addButtonClicked(){
+				var empId = document.getElementById("empid").value;
+				var location = document.getElementById("location").value;
+				addEmployee(empId,location);
+				displayEmployees();
+			}
+		</script>
+	</head>
+	<body>
+			<section>
+				Id <input type="text" id="empid"><br/>
+				Location<select id="location">
+					<option>--SELECT--</option>
+					<option>Chennai</option>
+					<option>Pune</option>
+					<option>Bangalore</option>
+				</select><br/>
+				<input type="button" value="Add" onclick = "addButtonClicked();">	
+			</section>
+			<section id="results">
+			</section>	
+	</body>
+</html>
+
+
+
+
+
+
+
+

@@ -1,0 +1,17 @@
+<html>
+	<head>
+		<script>
+			function add(){
+				var name = document.getElementById("name").value;
+				var option = "<option>" + name + "</option>";
+				document.getElementById("names").innerHTML += option;
+			}
+		</script>
+	</head>
+	<body>
+		Name <input type="text" id="name">
+		<input type="button" value="Add" onclick="add();"><br/>
+		<select id="names">
+		</select>
+	</body>
+</html>
