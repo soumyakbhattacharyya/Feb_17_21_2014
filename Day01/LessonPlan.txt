@@ -1,0 +1,33 @@
+CSS
+	selector {
+		property : value;
+	}
+	selector = .class #id elements
+	X Y
+	X > Y
+	X + Y (Y element after X)
+
+px (absolute unit of measurement)
+em (depends on font size; if font size is 10 the 1 em is 10)
+Properties
+	background (color,image,position,repeat(repeat,repeat-x,repeat-y,no-repeat)
+	border
+	color (rgb(,,), #aaaaaa)
+	font( weight,family,size,style)
+	float (shifted to the left or right side of the current line.)
+	margin
+	overflow(visible,hidden,scroll)
+	position
+	text(align, decoration, transform)	
+
+Inheritance
+
+pseudo classes
+
+Link (:visited, :hover, :active, :link(yet to be visited))
+input (:disabled,:enabled,:target,:checked)
+Positional (:first-child,:last-child,:nth-child(N):nth-of-type(N)
+:first-of-type(N)
+Relational (:not(S) div:not(cls1), :empty)
+
+	
