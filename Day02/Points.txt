@@ -3,6 +3,9 @@ CSS
 selector:pseudo-selector {
 	property : value;
 }
+body's font-size is 15px then 1em refers to 15px
+
+
 selectors
 .class
 #id
