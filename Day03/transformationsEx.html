@@ -1,0 +1,52 @@
+<html>
+	<head>
+		<style>
+			section#outerbox{
+				position : relative;
+				left : 5em;
+				top:5em;
+				height : 30em;
+				width :  50em;
+				border-style:solid;
+				border-width: 0.2em;
+			}
+			#xbox,#ybox,#zbox {
+				position : relative;
+				height : 10em;
+				width :  10em;
+				border-style:solid;
+				border-width: 0.1em;
+				text-align:center;
+				font-size: large;
+				-webkit-transition-duration:5s;
+			}
+			#xbox {
+				top : 1em;left:1em;
+			}
+			#ybox {
+				top : -9em;left:15em;
+			}
+			#zbox {
+				top : -19em;left:30em;
+			}
+			#xbox:hover{
+				color : red;
+				width:15em;
+				font-size: 25px;
+			}
+			#ybox:hover{
+				-webkit-transform:rotateY(360deg);
+			}
+			#zbox:hover{
+				-webkit-transform:rotateZ(360deg);
+			}
+		</style>
+	</head>
+	<body>
+		<section id="outerbox">
+			<section id="xbox">X</section>
+			<section id="ybox">Y</section>
+			<section id="zbox">Z</section>						
+		</section>
+	</body>
+</html>
