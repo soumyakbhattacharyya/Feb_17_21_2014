@@ -1,0 +1,36 @@
+<html>
+	<head>
+		<style>
+
+			@-webkit-keyframes moving{
+				from{
+					//left:1em;	
+					-webkit-transform:rotate(0deg);
+					background-color: red;
+
+				}
+				to {
+					//left:20em;
+					-webkit-transform:rotate(36000deg);
+					background-color: blue;
+				}
+			}
+			#mybox {
+				position:relative;
+				left:1em; top:1em;border-style: solid;
+				border-width: 0.2em;border-radius: 2em;
+				height:20em;width:20em;
+				-webkit-box-shadow:5px 5px 5px pink;
+				text-align:center;
+				-webkit-animation-name:moving;
+				-webkit-animation-duration:1s;
+				-webkit-animation-iteration-count:infinite;
+			}
+		</style>
+	</head>
+	<body>
+		<section id="mybox">
+			Cool	
+		</section>
+	</body>
+</html>
