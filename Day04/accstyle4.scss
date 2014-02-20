@@ -1,0 +1,8 @@
+$sections : '#mybox1' '#mybox2' '#mybox3' '#mybox4';
+
+@each $item in $sections{
+	#{$item} {
+		position:relative;
+	}
+}
+

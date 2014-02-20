@@ -1,7 +1,6 @@
 //acc-style3.scss
 
 @mixin positions($ht,$wdth,$top:false,$left:false){
-
 	height : #{$ht}em; //12em #{$ht}em   12 em($ht em)
 	width:#{$wdth}em;
 	@if $top != false {
