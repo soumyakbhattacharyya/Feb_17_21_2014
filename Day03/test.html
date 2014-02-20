@@ -1,0 +1,36 @@
+<html>
+	<head>
+		<style>
+			@-webkit-keyframes spin {
+				from {
+					
+					-webkit-transform:rotate(1deg);
+				}
+				to {
+					
+					-webkit-transform:rotate(360deg);
+				}
+			}
+
+			#box1 {
+				position:relative;
+				top : 1em;
+				left:1em;
+				border-style: solid;
+				border-radius: 10deg;
+				border-width: 0.2em;
+				width:10em;
+				height:10em;
+				text-align: center;
+				-webkit-animation-name:spin;
+				-webkit-animation-duration:5s;
+				-webkit-animation-iteration-count:infinite;
+			}
+		</style>
+	</head>	
+	<body>
+		<section id="box1">
+			cool
+		</section>	
+	</body>	
+</html>

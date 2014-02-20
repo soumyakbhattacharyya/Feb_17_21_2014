@@ -1,10 +1,6 @@
 //Lab1.scss
 $timeline: 0 25 50 100;
-$topvalues: 1em 1.1em 1.2em 1.3em 1.4em;
 
-#box1{
-	top: nth($topvalues,1);
-}
 
 @-webkit-keyframes roll{
 	@each $i in $timeline {
