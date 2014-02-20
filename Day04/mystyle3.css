@@ -1,0 +1,14 @@
+#mybox1 {
+  height: 1.2em;
+  width: 3.4em;
+  border-style: solid; }
+
+#mybox2 {
+  height: 1em;
+  width: 3em;
+  border-style: inset; }
+
+#mybox3 {
+  height: 2.4em;
+  width: 4em;
+  border-style: solid; }

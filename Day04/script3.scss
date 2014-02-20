@@ -1,0 +1,12 @@
+@mixin boxes($id,$ht,$wd,$borderstyle){
+	#{$id} {
+		height:#{$ht}em;
+		width:#{$wd}em;
+		border:{
+			style : #{$borderstyle};
+		}
+	}
+}
+@include boxes("#mybox1",1.2,3.4,"solid");
+@include boxes("#mybox2",1,3,"inset");
+@include boxes("#mybox3",2.4,4,"solid");

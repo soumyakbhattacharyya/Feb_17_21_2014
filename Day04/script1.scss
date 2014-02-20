@@ -1,0 +1,11 @@
+$color1 : red;
+$color2 : yellow;
+
+#box1 {
+	color : $color1;
+	background-color : $color2;
+}
+#box1 {
+	color : $color2;
+	background-color : $color1;
+}
