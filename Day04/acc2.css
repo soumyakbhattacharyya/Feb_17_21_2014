@@ -1,0 +1,12 @@
+article section {
+  color: red; 
+}
+
+article section ul {
+    display: block; 
+}
+
+nav ul {
+  list-style: none; }
+nav li {
+  display: none; }

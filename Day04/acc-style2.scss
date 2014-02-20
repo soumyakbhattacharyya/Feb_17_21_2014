@@ -1,0 +1,22 @@
+//acc-style2.scss
+
+article{
+	section{
+		color:red;
+		ul {
+			display : block;
+		}
+	}
+}
+
+nav {
+	ul {
+		list:{
+			style : none;
+		}
+	}
+	
+	li {
+		display:none;
+	}
+}

@@ -1,0 +1,31 @@
+@mixin colors($clr:white,$bgclr:black){
+	color : #{$clr};
+	background:{
+		color : #{$bgclr};
+	}
+}
+
+@mixin positions($pos,$ht,$wdth,$top){
+	position : #{$pos};
+	top : #{$top}em;
+	height : #{$ht}em;
+	width : #{$wdth}em;
+}
+
+hr{
+	@include positions("relative",0.1,1,5);
+	@include colors();
+}
+#mybox1{
+	@include positions("relative",15,15,10);
+	@include colors("white");
+	top : 10em; left:30em;
+	border:{
+		style: solid;
+		width: 0.1em;
+		radius: 0.1em;
+	}
+	text:{
+		align:center;
+	}
+}

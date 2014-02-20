@@ -1,0 +1,21 @@
+hr {
+  position: relative;
+  top: 5em;
+  height: 0.1em;
+  width: 1em;
+  color: white;
+  background-color: black; }
+
+#mybox1 {
+  position: relative;
+  top: 10em;
+  height: 15em;
+  width: 15em;
+  color: white;
+  background-color: black;
+  top: 10em;
+  left: 30em;
+  border-style: solid;
+  border-width: 0.1em;
+  border-radius: 0.1em;
+  text-align: center; }

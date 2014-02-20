@@ -1,0 +1,15 @@
+//acc-style1.scss
+
+$a:red;
+$b:1em;
+
+section {
+	background:{
+		color : $a;
+	}
+	font: {
+		family : "Arial";
+		size: $b;
+	}
+	width : $b;
+}
