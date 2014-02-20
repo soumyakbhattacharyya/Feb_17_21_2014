@@ -6,7 +6,7 @@
 }
 
 @mixin positions($pos,$ht,$wdth,$top){
-	position : #{$pos};
+	position : $pos;
 	top : #{$top}em;
 	height : #{$ht}em;
 	width : #{$wdth}em;
@@ -18,7 +18,7 @@ hr{
 }
 #mybox1{
 	@include positions("relative",15,15,10);
-	@include colors("white");
+	@include colors("white","black");
 	top : 10em; left:30em;
 	border:{
 		style: solid;
