@@ -1,0 +1,24 @@
+@import "_acct";
+
+#menu{
+	@include size(em,5,95);
+	@include positioning(relative,em,0,0,0,0);
+	@include borders(em,solid,0.2,2);
+}
+#content{
+	@include size(em,40,95);
+	@include positioning(relative,em,2,0,2,0);
+	@include borders(em,solid,0.2,2);
+}
+footer{
+	text:{
+		align:center;
+	}	
+	@include positioning(relative,em,4,0,2,0);
+}
+
+body{
+	background:{
+		color : white;
+	}
+}

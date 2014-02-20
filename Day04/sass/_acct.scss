@@ -1,0 +1,24 @@
+//_acct.scss
+
+$percent : "%";
+@mixin size($uom,$ht,$wdth){
+	height : #{$ht}$uom;
+	width : #{$wdth}#{$percent};
+	padding:{
+		left : 5#{$percent};
+	}
+}
+@mixin positioning($pos,$uom,$top,$left,$right,$bottom){
+	position : $pos;
+	top : #{$top}$uom;
+	left : #{$left}$uom;
+	right : #{$right}$uom;
+	bottom : #{$bottom}$uom;
+}
+@mixin borders($uom,$style,$wdth,$radius){
+	border: {
+		style : $style;
+		radius: #{$radius}$uom;
+		width: #{$wdth}$uom;
+	}
+}
