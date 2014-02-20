@@ -1,0 +1,33 @@
+//acc-style3.scss
+
+@mixin positions($ht,$wdth,$top:false,$left:false){
+
+	height : #{$ht}em; //12em #{$ht}em   12 em($ht em)
+	width:#{$wdth}em;
+	@if $top != false {
+		top : #{$top}em;
+	}
+	@if $left != false {
+		left: #{$left}em;
+	}
+}
+
+#section1{
+	@include positions(10,10,2);
+}
+#section2{
+	@include positions(12,12,false,2);
+}
+
+/*
+#section1{
+	height : 10em;
+	width : 10em;
+	top: 2em;
+}
+#section2{
+	height : 12em;
+	width : 12em;
+	left: 2em;
+}
+*/
