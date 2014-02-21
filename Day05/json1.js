@@ -1,5 +1,12 @@
 //JSON 
 //JavaScript Object Notation
+var book1 = {
+	title : "ABC",
+	author : "XYZ"
+};
+//convert book1 json object into an array where the keys are the 
+//book1's properties
+
 
 var player1 = {
 	name : "Dhoni",
