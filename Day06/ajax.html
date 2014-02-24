@@ -1,0 +1,26 @@
+<html>
+	<head>
+		<script>
+			var xhr;
+			function giveMeACall(){
+				if(xhr.readyState == 4){
+					var response = xhr.responseText;
+					document.getElementById("capital").innerHTML = response;
+				}
+			}
+			function getInfo(){
+				var url = "World.jsp?country=" + document.getElementById("country").value;
+				xhr = new XMLHttpRequest();
+				xhr.onreadystatechange = giveMeACall;
+				xhr.open("GET",url);
+				xhr.send();
+			}
+		</script>
+	</head>
+	<body>
+		<h1>Example using AJAX</h1>
+		Country <input type="text" id="country">
+		<input type="button" value="Get Capital" onclick="getInfo();">
+		<section id="capital"></section>
+	</body>
+</html>
