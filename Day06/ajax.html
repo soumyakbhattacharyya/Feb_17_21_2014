@@ -1,12 +1,14 @@
 <html>
 	<head>
 		<script>
-			var xhr;
 			function giveMeACall(){
 				if(xhr.readyState == 4){
+					document.getElementById("loading").style.display = "none";
 					var response = xhr.responseText;
 					document.getElementById("capital").innerHTML = response;
 				}
+				else
+					document.getElementById("loading").style.display = "inline";
 			}
 			function getInfo(){
 				var url = "World.jsp?country=" + document.getElementById("country").value;
@@ -20,7 +22,8 @@
 	<body>
 		<h1>Example using AJAX</h1>
 		Country <input type="text" id="country">
-		<input type="button" value="Get Capital" onclick="getInfo();">
+		<input type="button" value="Get Capital" onclick="getInfo();"><br/>
+		<img src="loading.jpeg" style="display:none;" height="15%" width="10%" id="loading"><br/>
 		<section id="capital"></section>
 	</body>
 </html>

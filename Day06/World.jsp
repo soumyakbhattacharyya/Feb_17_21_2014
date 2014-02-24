@@ -1,4 +1,5 @@
 <%
+	Thread.sleep(5000);
 	String country = request.getParameter("country");
 	String capital = "Unknown";
 	if("India".equals(country))
@@ -7,5 +8,5 @@
 		capital = "Washington DC";
 	else if("UK".equals(country))
 		capital = "London"; 
-	out.println("<h1>" + capital + "</h1>");
+	out.println(capital);
 %>
