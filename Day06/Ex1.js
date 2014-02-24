@@ -28,7 +28,7 @@ console.log(lengthArr);
 //ie., [{name:"India"},{name:"US"}]
 var objects = [];
 for (var i = 0; i < countries.length; i++) {
-	var obj = new Object();
+	var obj = new Object();//{name:""}
 	obj.name = countries[i];
 	objects.push(obj);
 };
