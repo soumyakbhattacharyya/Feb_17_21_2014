@@ -1,10 +1,27 @@
 <html>
 	<head>
 		<script>
+			function convertToJSON(response){
+				var obj = new Object();
+				var formattedResponse = response.substr(1,response.length-3);		
+				var commaArr = formattedResponse.split(",");
+				for(var i=0;i<commaArr.length;i++){
+					var colonArr = commaArr[i].split(":");
+					var find = /\"/;
+					colonArr[0] = colonArr[0].replace(find,"");//.replace(find,"");
+					colonArr[1] = colonArr[1].replace(find,"");//.replace(find,"");
+					obj[colonArr[0]] = colonArr[1];	
+				}
+				console.log(obj);
+				return obj;
+			}
 			function giveMeACall(){
 				if(xhr.readyState == 4){
 					var response = xhr.responseText;
-					document.getElementById("capital").innerHTML = response;
+					var obj = convertToJSON(response);
+					//var obj = JSON.parse(response);
+					document.getElementById("capital").innerHTML = obj.capital + ", " + obj.continent + ", " + obj.population;
+
 				}
 			}
 			function getInfo(){
