@@ -1,0 +1,23 @@
+<html>
+	<head>
+		<script>
+			function recordCurrentTime(){
+				sessionStorage.setItem("audiotime",document.getElementById("audio1").currentTime);
+			}
+			function setCurrentTime(){
+				if(sessionStorage.getItem("audiotime")){
+					document.getElementById("audio1").currentTime = sessionStorage.getItem("audiotime");
+				}
+			}
+			function init(){
+				document.getElementById("audio1").onloadeddata = setCurrentTime;	
+
+				document.getElementById("audio1").ontimeupdate = recordCurrentTime;
+			}			
+		</script>
+	</head>
+	<body onload="init();">
+		<audio id="audio1" src="TumHiHo.mp3" controls>
+		</audio><br/>
+	</body>
+</html>
