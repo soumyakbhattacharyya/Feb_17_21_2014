@@ -1,0 +1,24 @@
+<html>
+	<head>
+		<script>
+			//setItem,getItem,removeItem
+			if(sessionStorage.getItem("welcome") == undefined){
+				sessionStorage.setItem("welcome","Welcome to Accenture");	
+				alert("Just created welcome in SS");
+			}
+			else{
+				alert(sessionStorage.getItem("welcome"));
+			}
+
+			if(localStorage.getItem("welcome") == undefined){
+				localStorage.setItem("welcome","Welcome to Bangalore");	
+				alert("Just created welcome in LS");
+			}
+			else{
+				alert(localStorage.getItem("welcome"));
+			}
+		</script>	
+	</head>	
+	<body>
+	</body>	
+</html>

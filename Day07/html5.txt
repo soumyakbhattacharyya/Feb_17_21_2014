@@ -1,0 +1,9 @@
+UI tags
+Data Storage or Web Storage
+-->Will remain in the browser's memory until you clear the browsing data
+-->Will not travel with the request to the server
+-->Size varies from one browser to the other
+
+LocalStorage
+SessionStorage
+IndexedDB

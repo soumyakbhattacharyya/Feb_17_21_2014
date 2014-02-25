@@ -1,0 +1,11 @@
+AJAX code is getting messier and clumsy. Let's modularize it.
+-->Create a file called Ajax.js. Define your AJAX code in it in such a way that, from now if you want to send AJAX requests you will just write the following.
+
+Acct.ajax({
+	url : "the url goes here",
+	success : function(response){
+		//response will be the actual response from the server
+	}
+});
+
+So, you don't have to worry about writing XMLHttpRequest related code all the time.

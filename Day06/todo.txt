@@ -1,0 +1,8 @@
+/*
+In ajaxEx1.html create another listbox where you display the list of all cities.
+When you select a country in the country listbox, send an AJAX request to cities.jsp by passing the country; Get the list of all cities and display them in the city listbox.
+
+Note: The cities for a particular country should be fetched only ONCE from the server. ie., if you select India and get the cities of India from the server, you should not go to the server again to fetch the cities of India.
+Use "onchange" on a listbox
+DO NOT WRITE JAVASCRIPT CODE IN HTML FILE
+*/
