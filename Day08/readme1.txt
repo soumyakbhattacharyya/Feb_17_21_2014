@@ -6,6 +6,7 @@ var tbl = new Table(["Name","Age","Salary"]);
 tbl.addRow("Sam",22,10000);
 tbl.addRow("Ram",32,40000);
 
+In the HTML file create three textboxes for name,age and salary. Create an add button. Every time you enter the values and hit the add button a new row will get added to the table below.
 
 
 
