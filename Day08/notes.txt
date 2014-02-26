@@ -1,2 +1,17 @@
+document
+	createElement
+	createTextNode
+	insertBefore
+	insertAfter
+	appendChild
+	setAttribute
+	
+window
+	document(HTMLDocument)
+	window.document.getElementById();
+	window.alert()
+
+
+
 Date, String, Object, Number, Boolean, RegExp
 Global properties and functions

@@ -1,0 +1,36 @@
+<html>
+	<head>
+		<script>
+			function createTable(){
+				var table = document.createElement("table");
+				table.setAttribute("border","1");
+				var thead = document.createElement("thead");
+				var row = document.createElement("tr");
+				var cell1 = document.createElement("th");
+				var cell1text = document.createTextNode("Name");
+				cell1.appendChild(cell1text);
+				row.appendChild(cell1);
+				thead.appendChild(row);
+				table.appendChild(thead);
+				document.body.appendChild(table);
+			}
+			function createLink(){
+				var link = document.createElement("a");
+				link.setAttribute("href","http://www.google.com");
+				var text = document.createTextNode("Google");
+				link.appendChild(text);
+				document.body.appendChild(link);
+			}
+			function doSomething(){
+				var elem = document.createElement("input");
+				elem.setAttribute("type","text");
+				elem.setAttribute("id","firstname");
+				document.body.appendChild(elem);
+			}
+		</script>	
+	</head>
+	<body>
+			<input type="button" value="DOM" 
+				onclick="createTable();">
+	</body>	
+</html>
