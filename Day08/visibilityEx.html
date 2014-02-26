@@ -1,0 +1,18 @@
+<html>
+	<head>
+		<script>
+			document.addEventListener("webkitvisibilitychange",playPauseVideo);
+			
+			function playPauseVideo(){
+				var videoElem = document.getElementById("video1"); 
+				if(document.webkitHidden)
+					videoElem.pause();
+				else
+					videoElem.play();
+			}
+		</script>
+	</head>
+	<body>
+		<video id="video1" src="Lambda.mov" controls height="50%" width="50%">
+	</body>	
+</html>

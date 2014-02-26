@@ -1,0 +1,16 @@
+<html>
+	<head>
+		<script>
+			document.addEventListener("webkitvisibilitychange",doSomething);
+			function doSomething(){
+				var hidden = document.webkitHidden;
+				var message = hidden? "Not active":"Active";	
+				message += " at " + new Date() + "<br/>";
+				document.getElementById("msg").innerHTML += message;
+			}
+		</script>
+	</head>
+	<body>
+		<section id="msg"></section>
+	</body>	
+</html>
