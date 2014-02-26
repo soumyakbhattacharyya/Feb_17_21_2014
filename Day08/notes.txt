@@ -1,0 +1,2 @@
+Date, String, Object, Number, Boolean, RegExp
+Global properties and functions
