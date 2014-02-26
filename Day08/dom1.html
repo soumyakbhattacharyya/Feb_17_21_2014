@@ -27,9 +27,14 @@
 				elem.setAttribute("id","firstname");
 				document.body.appendChild(elem);
 			}
+			function f(){
+				document.onwebkitvisibilitychange = function(){
+					console.log(document.webkitHidden);
+				};
+			}
 		</script>	
 	</head>
-	<body>
+	<body onload="f();">
 			<input type="button" value="DOM" 
 				onclick="createTable();">
 	</body>	

@@ -5,7 +5,11 @@ document
 	insertAfter
 	appendChild
 	setAttribute
-	
+	childNodes
+	firstChild
+	lastChild
+	parentNode
+
 window
 	document(HTMLDocument)
 	window.document.getElementById();

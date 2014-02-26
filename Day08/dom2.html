@@ -1,0 +1,28 @@
+<html>
+	<head>
+		<script>
+			function f(){
+				var table = document.getElementById("table1");
+				console.log(table.lastChild.lastChild);//LAST ROW
+				table.lastChild.childNodes[2].nextSibling;
+				table.lastChild.childNodes[2].previousSibling;
+				
+				var p1 = document.getElementById("p1");
+				console.log(p1.parentNode);	
+				var section1 = document.getElementById("section1");
+				//section1.childNodes[1];
+				console.log(section1.firstChild);
+				console.log(section1.lastChild);
+				var children = section1.childNodes;
+				for(var i=0;i<children.length;i++){
+					console.log(children[i]);
+				}
+			}
+			
+		</script>	
+	</head>
+	<body onload="f();">
+		<table id="table1"><thead></thead><tbody></tbody></table>
+		<section id="section1"><p id="p1">Para1</p><p id="p2">Para2</p><p id="p3">Para3</p></section>	
+	</body>	
+</html>
