@@ -1,1 +1,1 @@
-<%= "{\"message\" : \"Hello\"}" %>
+<%= "acct({\"message\" : \"Hello\"})" %>
