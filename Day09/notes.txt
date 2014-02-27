@@ -1,0 +1,12 @@
+What are cookies?
+
+What are HTTP Headers?
+	Programmatically User-Agent HTTP Header
+	
+
+How do you find out if the request to your application comes from a Desktop or Mobile device?
+
+How do you get the device information that is used to access your application?
+
+How do you redirect to mobile specific application if it's requested from a mobile device?
+
