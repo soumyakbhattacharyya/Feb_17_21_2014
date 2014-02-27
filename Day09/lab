@@ -1,0 +1,44 @@
+Create a page called Day09Lab.html
+Create an array of countries with their capital as given below;
+
+arr[“India”] = “Chennai”;
+arr[“UK”] = “London”;
+arr[“Spain”] = “Madrid”;
+arr[“France”] = “Paris”;
+arr[“Japan”] = “Tokyo”;
+
+Here’re the tasks to be done;
+
+1) When the page loads construct a table with the following columns.
+
+Temperatures
+
+Country 		City 	  Min 	Max  Time
+
+India   		Chennai    21	32	  27/02/14, 2:00 PM
+Spain   		Madrid     1 	12	  27/02/14, 2:00 PM
+
+…
+
+
+2) You will get the temperature of each city by sending an AJAX request to the following URL.
+http://api.openweathermap.org/data/2.5/weather?q=CITY,COUNTRY&units=metric&callback=test
+
+Study the output this URL to begin with.
+Replace the CITY and COUNTRY with appropriate values from the array
+
+3) Every 10 seconds you will send a request to this site passing the city values and getting the response and displaying it.
+That means, even if the temperature doesn’t really change in 10 seconds the Time column will keep changing.
+When a particular city’s temperature is being requested that row in the table should become red in color indicating that new temperature is being computed.
+
+4) If you move to a different tab in the browser, the AJAX calls need to be suspended and should be resumed once the user activates the tab.
+
+5) When you close and open the browser page the table should contain the previously computed temperatures.
+
+REMEMBER THE BASICS
+
+Do not write CSS/JS code in HTML file
+Try to write modularize JavaScript like Acct.ajax() or TextBox class.
+Use SASS if you can
+
+Do not give up;

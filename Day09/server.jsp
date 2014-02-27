@@ -1,1 +1,2 @@
+<!--JSONP-->
 <%= "acct({\"message\" : \"Hello\"})" %>

@@ -2,13 +2,18 @@
 	<head>
 		<script>
 			//window (onload,setInterval,alert, eval)
+			function acct(jsonObj){
+				document.write(jsonObj.message);
+			}
 			function doSomething(){
 				var xhr = new XMLHttpRequest();
 				xhr.open("GET","server.jsp");
 				xhr.onreadystatechange = function(){
 					if(xhr.readyState == 4){
-						var obj = JSON.parse(xhr.responseText);
-						console.log(obj.message);
+						//acct({});
+						eval(xhr.responseText);
+						//var obj = JSON.parse(xhr.responseText);
+						//console.log(obj.message);
 					}	
 				};
 				xhr.send();
