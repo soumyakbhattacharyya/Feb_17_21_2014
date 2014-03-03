@@ -1,0 +1,32 @@
+<html>
+	<head>
+		<script src="websqllab.js"></script>	
+	</head>
+	<body>
+		<header><h1>Address book</h1></header>
+		<section id="addsection">
+			<fieldset>
+				<legend>Add contact</legend>
+				<input type="text" placeholder="first name" id="firstname"><br/>
+				<input type="text" placeholder="last name" id="lastname"><br/>
+				<input type="text" placeholder="mobile" id="mobile"><br/>
+				<input type="button" value="Add" id="addbutton">
+			</fieldset>	
+		</section>
+		<section id="contactssection">
+			<input type="text" placeholder="firstname" id="searchfirstname">
+			<input type="button" value="Search" disabled id="searchbutton"><hr/>
+			<h4>Contacts</h4>
+			<table border="1" cellpadding="5">
+				<thead>
+					<tr>
+						<th>First name</th>
+						<th>Last name</th>						
+					</tr>
+				</thead>
+				<tbody id="contactstbody">
+				</tbody>	
+			</table>	
+		</section>	
+	</body>	
+</html>
