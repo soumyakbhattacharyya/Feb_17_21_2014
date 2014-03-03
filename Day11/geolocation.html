@@ -1,0 +1,43 @@
+<html>
+	<head>
+		<title>Geo location</title>
+		<script src="http://maps.googleapis.com/maps/api/js?sensor=true"></script>
+		<script>
+			window.onload = init;
+			function init(){
+				navigator.geolocation.getCurrentPosition(fetchDetails);
+			}
+			function fetchDetails(position){
+				var lat = position.coords.latitude;
+				var lng = position.coords.longitude;
+				var mapElement = document.getElementById("mymap");
+				var coords = new google.maps.LatLng(lat,lng);
+				var myOptions = {
+			      zoom: 20, center: coords,
+			      mapTypeId: google.maps.MapTypeId.ROADMAP
+			    };
+			    var googleMap = new google.maps.Map(mapElement,myOptions);
+			    var marker = new google.maps.Marker({
+			        position: coords, 
+			        map: googleMap, 
+			        title:"You're here"
+			    }); 
+
+
+
+
+				//document.getElementById("lat").innerHTML = lat;
+				//document.getElementById("lng").innerHTML = lng;
+				
+			}
+		</script>
+	</head>
+	<body>
+		<h2 id="lat"></h2>
+		<h2 id="lng"></h2>
+		<section id="mymap" style="height:60%;width:60%;border-style:solid;border-width:0.3em">
+		</section>	
+
+
+	</body>	
+</html>
