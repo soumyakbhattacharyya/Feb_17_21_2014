@@ -1,0 +1,52 @@
+<html>
+	<head>
+		<script>
+			//transaction, executeSql(query,args,success,error)
+			var db = openDatabase("Acct",1.0,"Demo database",3928479324);
+			db.transaction(createPersonTable);
+			db.transaction(addPerson);
+			db.transaction(loadPersons);
+			//db.transaction(deletePerson);
+			
+			function loadPersons(txn){
+				var query = "select * from person";
+				txn.executeSql(query,[],function(tx,result){
+					var count = result.rows.length;
+					for(var i=0;i<count;i++){
+						var row = result.rows.item(i);
+						console.log(row.name + ", " + row.age);
+					}
+				});
+			}
+
+			function deletePerson(txn){
+				var query = "delete from person where name=?";
+				txn.executeSql(query,
+					['Ram'],
+					function(t,result){
+						console.log("Person deleted successfully");
+						console.log(result);
+						console.log(result.rowsAffected);
+					},
+					function(t,err){
+					console.log("Error deleting person: " + err.message);
+				})
+			}
+
+			function addPerson(txn){
+				var query = "insert into person values(?,?,?)";
+				txn.executeSql(query,[101,"Ram",12],function(){
+					console.log("Person inserted successfully");
+				},function(tx,er){
+					console.log("Error: ");
+					console.log(er.message);
+				});
+			}
+			function createPersonTable(txn){
+				var query = "create table if not exists person(id,name,age)";
+				txn.executeSql(query);
+			}
+
+		</script>
+	</head>	
+</html>
