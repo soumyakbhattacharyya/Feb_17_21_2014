@@ -3,7 +3,6 @@ var db;
 
 function init(){
 	document.getElementById("addbutton").onclick = addContact;
-	//document.getElementById("searchbutton").onclick = searchContact;
 	document.getElementById("searchfirstname").onkeyup = searchContact;
 	createAndInitializeAddressBook();
 }
