@@ -1,0 +1,34 @@
+<html>
+	<head>
+		<script>
+			//dragstart,dragend, dragover,drop
+			function message1_dragstart(e){
+				var data = e.srcElement.innerHTML;
+				e.dataTransfer.setData("mydata",data);
+			}
+
+			function box1_drop(e){
+				var data = e.dataTransfer.getData("mydata");
+				e.srcElement.innerHTML = data;
+				document.getElementById("message1").innerHTML = "";
+			}
+			function box1_dragover(e){
+				e.preventDefault();
+			}
+			function init(){
+				var message1 = document.getElementById("message1");
+				message1.ondragstart = message1_dragstart;
+				var box1 = document.getElementById("box1");
+				box1.ondragover = box1_dragover;
+				box1.ondrop = box1_drop;
+
+
+			}
+		</script>	
+	</head>
+	<body onload="init();">
+		<section id="message1" draggable="true">jQuery</section>	
+		<br/>
+		<section id="box1" style="border-width:0.1em;border-style:solid;width:30%;height:40%;"></section>
+	</body>	
+</html>
