@@ -1,0 +1,22 @@
+<html>
+	<head>
+		<script src="jquery-2.1.0.min.js"></script>
+		<script>
+			function buttonsClicked(){
+				alert($(this).val());
+			}
+			$().ready(function(){
+				$("#button1,#button2").on("click",buttonsClicked);
+				$("h1").each(function(){
+					alert($(this).html());
+				});
+			});
+		</script>	
+	</head>
+	<body>
+		<input type="button" value="Button 1" id="button1">	
+		<input type="button" value="Button 2" id="button2">
+		<h1>Header 1</h1>
+		<h1>Header 2</h1>
+	</body>	
+</html>

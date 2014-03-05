@@ -1,0 +1,41 @@
+<html>
+	<head>
+		<script src="jquery-2.1.0.min.js"></script>
+		<script>
+			function add(){
+				var li = $("li:first");
+				alert(li.parent().html());
+				li.remove();
+				$("body").append("<input type='text'>");
+				$("body").prepend("<input type='checkbox'>");
+			}
+			$().ready(function(){
+				$(":button").on("click",add);
+				
+
+    $.getJSON(url, function (json)
+    {
+
+        var lastquote = json.query.results.quote.LastTradePriceOnly;
+        $('#stock').text(lastquote);
+
+    });
+
+    $.getJSON(url, function (json)
+    {
+
+        var lastquote = json.query.results.quote.LastTradePriceOnly;
+        $('#stock').text(lastquote);
+
+    });
+			});
+		</script>
+	</head>
+	<body>
+		<ul>
+			<li>First</li>
+			<li>Second</li>
+		</ul>	
+		<input type="button" value="Add">
+	</body>	
+</html>
