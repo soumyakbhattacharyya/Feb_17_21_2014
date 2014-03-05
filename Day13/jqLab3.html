@@ -1,0 +1,55 @@
+<html>
+	<head>
+		<script src="jquery-2.1.0.min.js"></script>
+		<script>
+			function createPersonsTable(){
+				var table = "<table id='personstable' border='1' cellpadding='5'>";
+				table += "<thead>";
+				table += "<tr>";
+				table += "<th>Name</th>";
+				table += "<th>Age</th>";
+				table += "<th>Select</th>";
+				table += "</tr>";								
+				table += "</thead>";
+				table += "<tbody></tbody>";
+				table += "</table>";
+				$("#results").append(table);
+			}
+			function removePerson(){
+				$(":checked").each(function(){
+					$(this).parents("tr").remove();
+				});
+			}
+			function createRemoveButton(){
+				$("#results").append("<input type='button' id='removebutton' value='Remove'>");
+				$("#removebutton").on("click",removePerson);
+			}
+			function addRow(name,age){
+				var row = "<tr>";
+				row += "<td>" + name + "</td>";
+				row += "<td>" + age + "</td>";
+				row += "<td><input type='checkbox'></td>";
+				row += "</tr>";
+				$("tbody").append(row);
+			}
+			function addPerson(){
+				if($("#personstable").length == 0){
+					createPersonsTable();
+					createRemoveButton();
+				}
+				addRow($("#name").val(),$("#age").val());
+				$("#name").select();
+			}
+			$().ready(function(){
+				$("#addbutton").on("click",addPerson);
+			});
+		</script>
+	</head>
+	<body>
+		<input type="text" id="name" placeholder="name"><br/>
+		<input type="text" id="age" placeholder="age"><br/>
+		<input type="button" value="Add" id="addbutton"><br/>
+		<section id="results">
+		</section>	
+	</body>	
+</html>
