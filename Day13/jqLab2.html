@@ -1,0 +1,57 @@
+<html>
+	<head>
+		<script src="jquery-2.1.0.min.js"></script>
+		<script>
+			function validate(currentId,nextId){
+				var value = $(currentId).val();
+				if(isNaN(value)){
+					value = value.substr(0,value.length -1);
+					$(currentId).val(value);
+				}
+				else if(value.length == 3){
+					if(parseInt(value) <= 0 || parseInt(value) >= 254){
+						$(currentId).css("color","red");
+					}
+					else{
+						$(currentId).css("color","black");
+						$(nextId).focus();	
+					}
+					
+				}
+				else if(value.length < 3){
+					$(currentId).css("color","black");
+				}
+			}
+			function enterOctet1(){
+				validate("#octet1","#octet2");
+			}
+			function enterOctet2(){
+				validate("#octet2","#octet3");
+			}
+			function enterOctet3(){
+				validate("#octet3","#octet4");
+			}
+			function enterOctet4(){
+				validate("#octet4","#clickbtn");
+			}
+			$().ready(function(){
+				$("#octet1").focus();
+				$("#clickbtn").on("click",function(){
+					$("#octet1,#octet2,#octet3,#octet4").attr("disabled","disabled");
+				});
+				$("#octet1,#octet2,#octet3,#octet4").css("width","5%");
+				$("#octet1").on("keyup",enterOctet1);
+				$("#octet2").on("keyup",enterOctet2);
+				$("#octet3").on("keyup",enterOctet3);
+				$("#octet4").on("keyup",enterOctet4);
+			});
+		</script>
+	</head>	
+	<body>
+		ip address <input type="text" id="octet1">.
+		<input type="text" id="octet2">.
+		<input type="text" id="octet3">.
+		<input type="text" id="octet4"><br/>
+		<input type="button" value="Click" id="clickbtn">
+	</body>	
+</html>
