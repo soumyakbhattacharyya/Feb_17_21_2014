@@ -1,0 +1,32 @@
+<html>
+	<head>
+		<script src="jquery-2.1.0.min.js"></script>
+		<script>
+			$().ready(function(){
+				window.setInterval(function(){
+
+					$.getJSON("timejson.jsp",function(confuse){
+						$("#timejsonheader").html(confuse.time);
+					});
+
+					$("#timeheader").load("time.jsp");	
+
+				},1000);
+				
+
+
+/*				$.ajax({
+					url : "time.jsp",
+					success : function(response){
+						$("#timeheader").html(response);
+					}
+				});
+*/				
+			});
+		</script>
+	</head>
+	<body>
+		<h1 id="timejsonheader" style="color:red;"></h1>
+		<h2 id="timeheader"></h2>
+	</body>
+</html>		
