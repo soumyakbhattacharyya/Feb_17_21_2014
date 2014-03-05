@@ -1,3 +1,11 @@
+jQuery
+
+//arguments keyword
+html(), html("") 
+val(), val("")
+css("",""), css("")
+
+
 Mobile app
 	mobile web applications
 		develop HTML pages targeting devices

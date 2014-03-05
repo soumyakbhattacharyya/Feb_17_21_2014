@@ -1,0 +1,25 @@
+<html>
+	<head>
+		<script src="jquery-2.1.0.min.js"></script>
+		<script>
+			$().ready(function(){
+				//$("selector expression").somefunction();
+				alert($("#sec1").html());
+				alert($("#name").val());
+				alert($(".dummy").html());
+				$("#header1").css("color","blue");
+				$(".dummy").css("background-color","red");
+				
+				//document.getElementById("header1").style.color = "red";
+				//alert(document.getElementsByTagName("p")[0].innerHTML);
+				//alert(document.getElementById("sec1").innerHTML);
+			});
+		</script>
+	</head>
+	<body>
+		<h1 id="header1">jQuery training</h1>
+		<p class="dummy">This is para 1</p>
+		<input type="text" value="Sam" placeholder="name" id="name"><br/>
+		<section id="sec1">This is section1</section>
+	</body>	
+</html>
