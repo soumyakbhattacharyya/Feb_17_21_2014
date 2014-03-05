@@ -1,0 +1,28 @@
+<html>
+	<head>
+		<script src="jquery-2.1.0.min.js"></script>
+		<script>
+			function sendAjaxRequest(){
+				$.ajax({
+					url : "echojson.jsp",
+					dataType : "json",
+					data : {
+						name : $("#name").val()
+					},
+					success : function(response){
+						//JSON.parse(response);	
+						$("#message").html(response.message);
+					}
+				});
+			}
+			$().ready(function(){
+				$(":button").on("click",sendAjaxRequest);
+			});
+		</script>
+	</head>
+	<body>
+		<input type="text" id="name" placeholder="name">
+		<input type="button" value="Connect"><br/>
+		<h3 id="message"></h3>	
+	</body>	
+</html>
