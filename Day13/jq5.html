@@ -1,0 +1,26 @@
+<html>
+	<head>
+		<script src="jquery-2.1.0.min.js"></script>
+		<script>
+			$().ready(function(){
+				$("#contact").focus();
+				$("p").attr("id","p1");
+				$("h1").hide();
+				$("h1").show();
+				//Method Chaining
+				$("h1").css("color","red")
+					   .css("font-family","courier")
+					   .css("background-color","black")
+					   .html("Header");
+
+				// $("h1").css("color","red");
+				// $("h1").css("font-family","courier");
+			});
+		</script>
+	</head>
+	<body>
+		<input type="text" placeholder="contact" id="contact">	
+		<p>This is para 1</p>
+		<h1>Header 1</h1>
+	</body>
+</html>		

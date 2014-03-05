@@ -4,6 +4,9 @@ jQuery
 html(), html("") 
 val(), val("")
 css("",""), css("")
+attr("","")
+hide()
+show()
 
 
 Mobile app

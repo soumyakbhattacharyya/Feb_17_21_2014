@@ -1,0 +1,26 @@
+<html>
+	<head>
+		<script src="jquery-2.1.0.min.js"></script>
+		<script>
+			function changeStyle(){
+				$("h1").css("font-family",$("#ff").val());
+				$("h1").css("color",$("#clr").val());
+				$("#box1").css("border-width",$("#bw").val());
+			}
+			$().ready(function(){
+				$("#box1").css("border-style","solid");
+				$("#box1").css("border-width","0.1em");
+				$("#setbutton").on("click",changeStyle);
+			});
+		</script>
+	</head>
+	<body>
+		<section id="box1">
+			<h1>jQuery Exercise - I </h1>
+			<input type="text" placeholder="font family" id="ff"><br/>
+			<input type="text" placeholder="color" id="clr"><br/>
+			<input type="text" placeholder="border width" id="bw"><br/>
+			<input type="button" value="Set" id="setbutton">
+		</section>
+	</body>		
+</html>	
