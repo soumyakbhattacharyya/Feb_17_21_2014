@@ -1,0 +1,25 @@
+Mobile app
+	mobile web applications
+		develop HTML pages targeting devices
+		Mobile JS libraries(Sencha Touch, jQM, Dojo Mobile)
+		host them in Web server
+		access them from mobile web browsers
+	PhoneGap
+		Generates a native executable of your mobile web app
+		The executable can be installed in different devices
+
+	native applications
+
+Android (Google)(.apk)
+	Java, Android SDK, Eclipse(IDE)	
+iOS (Apple)(.ipa)
+	Objective-C, Cocoa Touch, XCode(IDE)
+Blackberry OS(Blackberry)
+	Java, RIM SDK, Eclipse
+Mango(Windows Phone)(.xap)
+	C#, Windows Phone SDK, Visual Studio(IDE)
+
+	
+jQuery/jQuery Mobile/Backbone JS
+Sencha Touch
+PhoneGap
