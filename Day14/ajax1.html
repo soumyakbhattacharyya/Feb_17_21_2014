@@ -1,0 +1,31 @@
+<html>
+	<head>
+		<script src="jquery-2.1.0.min.js"></script>
+		<script>
+			function training(response){
+				$("#message").text(response.message);
+			}
+			$().ready(function(){
+				$.ajax({
+					url : "http://127.0.0.1:8080/Day14/test2.jsp",
+					dataType : "jsonp",
+					success : function(response){
+						//$("#message").text(response.message);
+					}
+				});
+
+				/*($.ajax({
+					url : "http://api.openweathermap.org/data/2.5/weather?q=" + "chennai" + "," + 
+					"india" + "&units=metric&callback=test",
+					//url : "http://127.0.0.1:8080/Day14/test.jsp",
+					success : function(response){
+						$("#message").text(response);
+					}
+				});*/
+			});
+		</script>
+	</head>	
+	<body>
+		<h2 id="message"></h2>
+	</body>
+</html>
