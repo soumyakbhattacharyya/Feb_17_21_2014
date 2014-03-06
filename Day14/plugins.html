@@ -1,0 +1,24 @@
+<html>
+	<head>
+		<script src="jquery-2.1.0.min.js"></script>
+		<script src="jquery-acct.js"></script>
+		<script>
+			$().ready(function(){
+				$("#temp1").temperature("Chennai","India");
+				$("#temp2").temperature("Tokyo","Japan");
+				$("#section2").toCaps().bold();
+				$("#section1").rotate(3);
+				$("h1").color("red");
+				$("h2").date();
+			});
+		</script>
+	</head>
+	<body>
+		<section id="temp1"></section>
+		<section id="temp2"></section>
+		<section id="section2">This is section 2</section>
+		<section id="section1">This is section 1</section>
+		<h2></h2>
+		<h1>Plugin example 1</h1>	
+	</body>
+</html>		
