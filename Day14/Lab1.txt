@@ -1,9 +1,29 @@
+var symbol = "MS";
+var price = 123.45;
+
+var first = $("tbody tr td:contains('" + symbol "')");
+var priceCol = first.next();
+priceCol.text(price);
+
+
+
+
+
 You have an array of 5 stock symbols
-"MS", "GOOG", "INTC", "AAPL", "GM"
+"MS", "GOOG", "INTC", "AAPL", "GM", "FB", "INFY", "HP"
 
+You will send AJAX requests to the following url by passing each and every symbol.
+var SYMBOL = "FB";
 
+http://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20yahoo.finance.quotes%20where%20symbol%20in%20(%22"+ SYMBOL +"%22)%0A%09%09&env=http%3A%2F%2Fdatatables.org%2Falltables.env&format=json
 
-"http://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20yahoo.finance.quotes%20where%20symbol%20in%20(%22"+ SYMBOL +"%22)%0A%09%09&env=http%3A%2F%2Fdatatables.org%2Falltables.env&format=json";
+Once you get the output look for
+response.query.results.quote.LastTradePriceOnly
+response.query.results.quote.Change
+
+If the Change is positive display the value in GREEN color and if the Change is negative display the value in RED color.
+
+Have a refresh button to fetch the new values.
 
 
 

@@ -1,0 +1,94 @@
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" 
+				href="base/jquery.ui.all.css">
+		<script src="jquery-2.1.0.min.js"></script>
+		<script src="jquery-ui.js"></script>
+		<script>
+			function openDialog(){
+				$("#dialogsection").dialog({
+					draggable:false,
+					modal : true,
+					closeOnEscape : false
+				});
+			}
+			function yesbutton_clicked(){
+				$("#dialogsection").dialog("close");
+				var x = window.open("",'_self');
+				console.log(x.location.href);
+				var btn = x.document.getElementById("yesbutton");
+				btn.value = "YESBUTTON";
+				console.log(btn);
+				x.close();
+			}
+			function nobutton_clicked(){
+				$("#dialogsection").dialog("close");
+			}
+			$().ready(function(){
+				$("#dlgbutton").on("click",openDialog);
+				$("#yesbutton").on("click",yesbutton_clicked);
+				$("#nobutton").on("click",nobutton_clicked);
+				$("#dob").datepicker();
+				$(":button").button();
+				$("#inbox").tabs();
+				$("#accordion").accordion({
+					active : 2,
+					collapsible : true
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<input type="button" id="dlgbutton" value="Open dialog"><br/>
+		<section id="dialogsection" style='display:none'>
+			<p>Do you want to leave?</p>
+			<input type="button" value="Yes" id="yesbutton">
+			<input type="button" value="No" id="nobutton">
+		</section>
+		<br/>
+
+
+		<div id="accordion">
+			  <h3>Favorites</h3>
+			  <div>
+			    <p>
+					Favorites go here
+			    </p>
+			  </div>
+			  <h3>Sam</h3>
+			  <div>
+			    <p>
+					Inbox, Outbox
+			    </p>
+			  </div>
+			  <h3>Miscellaneous</h3>
+			  <div>
+			    <p>
+			Misc Contents
+			    </p>
+
+			  </div>
+
+		</div>
+		<br/>
+		<div id="inbox">
+			  <ul>
+			    <li><a href="#tabs-1">Primary</a></li>
+			    <li><a href="#tabs-2">Social</a></li>
+			    <li><a href="#tabs-3">Promotions</a></li>
+			  </ul>
+			  <div id="tabs-1">
+			    <p>Inbox contents</p>
+			  </div>
+			  <div id="tabs-2">
+			    <p>Social media related contents</p>
+			  </div>
+			  <div id="tabs-3">
+			    <p>promotional flyers/brochures</p>
+			  </div>
+		</div>
+		<br/>
+		<input type="text" id="dob">
+		<input type="button" value="Submit">
+	</body>	
+</html>
