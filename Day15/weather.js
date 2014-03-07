@@ -7,6 +7,13 @@ var Global = {
 	cityTemplate : "<li><h1>$city</h1><p>Min: $min, Max: $max</p><p class='ui-li-aside'>$time</p></li>"				
 };
 function displayTemperatures(){
+	$.mobile.loading('show', {
+		   text: "Loading...",
+		   textVisible: true,
+		   theme: "z",
+		   html: ""
+  	});
+
 	for(var i=0;i< Global.countries.length;i++){
 		var country = Global.countries[i].country;
 		var city = Global.countries[i].city;
@@ -21,8 +28,11 @@ function displayTemperatures(){
 								   .replace("$max",max)
 								   .replace("$min",min)
 								   .replace("$time",time);
-				$("#citiesul").append(li).listview("refresh");				   
+				$("#citiesul").append(li).listview("refresh");	
+				if(i == Global.countries.length)
+					$.mobile.loading('hide');			   
 			}
 		});			
 	}
+
 }
