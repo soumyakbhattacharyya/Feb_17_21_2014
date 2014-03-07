@@ -2,6 +2,7 @@ data-role
 	page
 	header, content, footer
 	button
+	listview
 data-position
 	fixed	
 data-iconpos	
