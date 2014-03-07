@@ -3,6 +3,7 @@
 		<link rel="stylesheet" type="text/css" href="jquery.mobile-1.4.2.css">
 		<script src="jquery-2.1.0.min.js"></script>	
 		<script src="jquery.mobile-1.4.2.js"></script>
+		<script src="weather.js"></script>
 		<script>
 			function storeInLocalStorage(userName,password){
 				localStorage.setItem("username",userName);
@@ -13,6 +14,7 @@
 				var password = $("#password").val();
 				if(userName == "admin" && password == "admin"){
 					$("body").pagecontainer("change","#page2");
+					displayTemperatures();
 					$("#message").hide();
 					if($("#rememberme").is(":checked"))
 						storeInLocalStorage(userName,password);
@@ -31,6 +33,7 @@
 			$().ready(function(){
 				if(isAuthenticatedFromLocalStorage()){
 					$("body").pagecontainer("change","#page2");
+					displayTemperatures();
 				}
 				else 
 					$("#loginbutton").on("click",login);
@@ -58,6 +61,10 @@
 		<section id="page2" data-role="page">
 			<section data-role="header">
 				<h1>Welcome</h1>
+			</section>	
+			<section data-role="content">
+				<ul id="citiesul" data-role="listview" data-inset="true">
+				</ul>	
 			</section>	
 		</section>	
 	</body>
