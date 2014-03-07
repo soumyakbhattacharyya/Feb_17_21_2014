@@ -1,0 +1,11 @@
+data-role
+	page
+	header, content, footer
+	button
+data-position
+	fixed	
+data-iconpos	
+
+Declarative
+data attributes that you add to your HTML
+Single page applications

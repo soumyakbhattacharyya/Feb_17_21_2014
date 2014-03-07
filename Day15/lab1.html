@@ -1,0 +1,64 @@
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="jquery.mobile-1.4.2.css">
+		<script src="jquery-2.1.0.min.js"></script>	
+		<script src="jquery.mobile-1.4.2.js"></script>
+		<script>
+			function storeInLocalStorage(userName,password){
+				localStorage.setItem("username",userName);
+				localStorage.setItem("password",password);
+			}
+			function login(){
+				var userName = $("#username").val();
+				var password = $("#password").val();
+				if(userName == "admin" && password == "admin"){
+					$("body").pagecontainer("change","#page2");
+					$("#message").hide();
+					if($("#rememberme").is(":checked"))
+						storeInLocalStorage(userName,password);
+				}
+				else{
+					$("#message").show();
+				}
+			}
+			function isAuthenticatedFromLocalStorage(){
+				var username = localStorage.getItem("username");
+				var password = localStorage.getItem("password");
+				if(username == "admin" && password == "admin")
+					return true;
+				return false;
+			}
+			$().ready(function(){
+				if(isAuthenticatedFromLocalStorage()){
+					$("body").pagecontainer("change","#page2");
+				}
+				else 
+					$("#loginbutton").on("click",login);
+			});
+		</script>
+	</head>	
+	<body>
+		<section data-role="page">
+			<section data-role="header">
+				<h1>Training</h1>
+			</section>	
+			<section data-role="content">
+				<input type="text" id="username" placeholder="user name">
+				<input type="password" id="password" placeholder="password">
+				<section>
+					<label data-iconpos="right" for="rememberme">Remember me</label> 
+					<input type="checkbox" id="rememberme">
+				</section>
+				<section id="message" style="display:none;">
+					<label style="color:red;font-size:0.8em">Invalid credentials</label>
+				</section>	
+				<input type="button" id="loginbutton" value="Login">
+			</section>	
+		</section>	
+		<section id="page2" data-role="page">
+			<section data-role="header">
+				<h1>Welcome</h1>
+			</section>	
+		</section>	
+	</body>
+</html>		
