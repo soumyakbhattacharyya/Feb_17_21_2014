@@ -12,9 +12,11 @@
 				console.log("Swiped from left to right");
 			}
 			function ocHandler(e){
+				console.log(window.orientation);
 				console.log("Orientation changed to " + e.orientation);
 			}
 			$().ready(function(){
+				console.log(window.orientation);
 				$(window).on("orientationchange",ocHandler);
 				$("#page1content").on("swipeleft",swipeLeftHandler);
 				$("#page1content").on("swiperight",swipeRightHandler);

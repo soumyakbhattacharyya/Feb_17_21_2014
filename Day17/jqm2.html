@@ -1,0 +1,52 @@
+<html>
+	<head>
+		<style>
+			.portrait {
+				height : 20%;
+				width : 40%;
+				margin :1%;
+			}
+			.landscape {
+				height : 25% ;
+				width : 25%;
+				margin-top :5%;
+			}
+			#sect1 {
+				position:relative;
+				top:20%;
+				left:10%;
+			}
+		</style>
+		<title>jQM</title>
+		<link rel="stylesheet" type="text/css" href="jquery.mobile-1.4.2.min.css">
+		<script src="jquery-2.1.0.min.js"></script>
+		<script src="jquery.mobile-1.4.2.min.js"></script>
+		<script>
+			function ocHandler(e){
+				var classToBeAdded = e.orientation;
+				var classToBeRemoved = e.orientation == "portrait"?"landscape":"portrait";
+				$("img").removeClass(classToBeRemoved);
+				$("img").addClass(classToBeAdded);
+			}
+			$().ready(function(){
+				$(window).on("orientationchange",ocHandler);
+				var orientation = window.orientation;
+				if(orientation == 0 || orientation == 180){
+					$("img").addClass("portrait");
+				}
+				else
+					$("img").addClass("landscape");
+			});
+		</script>
+	</head>
+	<body>
+		<section data-role="page" id="sect1">
+			<img src="codemonkey.jpeg">
+			<img src="codemonkey.jpeg">
+			<img src="codemonkey.jpeg">
+			<img src="codemonkey.jpeg">
+			<img src="codemonkey.jpeg">
+			<img src="codemonkey.jpeg">
+		</section>	
+	</body>	
+</html>		
