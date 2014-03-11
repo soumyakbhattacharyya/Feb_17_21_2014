@@ -1,0 +1,36 @@
+<html>
+	<head>
+		<script src="jquery-2.1.0.min.js"></script>
+		<script src="underscore-min.js"></script>
+		<script id="peopletemplate" 
+				type="text/x-underscore-template">
+				<%_.each(people,function(item){ %>
+				<li>
+					Hello <%= item%>
+				</li>
+				<% }); %>
+
+		</script>
+		<script>
+			var people = ["Sam","Ram","John","Mary"];
+			$().ready(function(){
+				var peopleTemplate = $("#peopletemplate").html();
+				var compiled = _.template(peopleTemplate);
+				var output = compiled(people);
+				$("#people").append(output);
+			});
+			// var people = ["Sam","Ram","John","Mary"];
+			// $().ready(function(){
+			// 	for(var i=0;i<people.length;i++){
+			// 		var li="<li>";
+			// 		li += people[i] + "</li>";
+			// 		$("#people").append(li);
+			// 	}
+			// });
+		</script>
+	</head>
+	<body>
+		<ul id="people">
+		</ul>
+	</body>
+</html>
