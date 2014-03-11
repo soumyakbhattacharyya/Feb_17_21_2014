@@ -9,16 +9,17 @@ $().ready(function(){
 	$("#nobutton").on("click",doNotRemoveContact);
 });
 function doNotRemoveContact(){
-	liToBeRemoved = "";
+	Global.liToBeRemoved = "";
 	$("#removepopup").popup("close");
 }
 function removeContact(){
-	liToBeRemoved.remove();
+	Global.liToBeRemoved.remove();
 	$("#contacts").listview("refresh");
 	$("#removepopup").popup("close");
 }
 function contactTapHold(){
-	liToBeRemoved = $(this);
+	Global.liToBeRemoved = $(this);
+	//var id = $(this).attr("id");
 	$("#removepopup").popup("open");
 }
 function addContact(){
