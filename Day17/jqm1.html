@@ -1,0 +1,34 @@
+<html>
+	<head>
+		<title>jQM</title>
+		<link rel="stylesheet" type="text/css" href="jquery.mobile-1.4.2.min.css">
+		<script src="jquery-2.1.0.min.js"></script>
+		<script src="jquery.mobile-1.4.2.min.js"></script>
+		<script>
+			function swipeLeftHandler(){
+				console.log("Swiped from right to left");
+			}
+			function swipeRightHandler(){
+				console.log("Swiped from left to right");
+			}
+			function ocHandler(e){
+				console.log("Orientation changed to " + e.orientation);
+			}
+			$().ready(function(){
+				$(window).on("orientationchange",ocHandler);
+				$("#page1content").on("swipeleft",swipeLeftHandler);
+				$("#page1content").on("swiperight",swipeRightHandler);
+			});
+		</script>
+	</head>
+	<body>
+		<section id="page1" data-role="page">
+			<section data-role="header">
+				<h1>Events</h1>
+			</section>
+			<section data-role="content" id="page1content">
+				<h2>Page 1 contents</h2>
+			</section>	
+		</section>
+	</body>	
+</html>

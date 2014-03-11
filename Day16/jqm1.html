@@ -1,0 +1,50 @@
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="jquery.mobile-1.4.2.min.css">
+		<script src="jquery-2.1.0.min.js"></script>
+		<script src="jquery.mobile-1.4.2.min.js"></script>
+	</head>	
+	<body>
+		<section data-role="page" id="page1">
+			<section data-role="header">
+				<h1>Monday blues!!!</h1>
+				<button class="ui-btn ui-shadow 
+					ui-corner-all ui-btn-icon-left ui-icon-bars ui-btn-icon-notext">
+				</button>
+				<a href="#menupanel">Menu</a>
+				<a href="#page2" class="ui-btn-right">Tue</a>
+			</section>
+			<section data-role="content">
+				<section data-role="collapsible-set">
+					<section data-role="collapsible">
+						<h1>A</h1>
+					</section>
+					<section data-role="collapsible">
+						<h1>B</h1>
+					</section>
+					<section data-role="collapsible">
+						<h1>C</h1>
+					</section>
+				</section>	
+			</section>	
+			<section data-role="footer" data-position="fixed">
+				<div data-role="navbar">
+					<ul>
+						<li><a href="#">FAQ</a></li>
+						<li><a href="#">Contact</a></li>
+						<li><a href="#">Feedback</a></li>
+					</ul>
+				</div>	
+			</section>	
+			<section id="menupanel" data-role="panel" data-display="overlay" data-position="right">
+				<h2>menu contents</h2>
+			</section>	
+		</section>
+		<section data-role="page" id="page2">
+			<section data-role="header" data-add-back-btn="true"
+			data-back-btn-text="Mon">
+				<h1>Terrible Tuesdays</h1>
+			</section>	
+		</section>	
+	</body>	
+</html>
