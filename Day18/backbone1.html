@@ -1,0 +1,40 @@
+<html>
+	<head>
+		<script src="jquery-2.1.0.min.js"></script>
+		<script src="underscore-min.js"></script>
+		<script src="backbone-min.js"></script>
+		<script>
+			$().ready(function(){
+				var plm = new PostLunchModel();
+				var plv = new PostLunchView({model:plm});
+			});
+
+			var PostLunchModel = Backbone.Model.extend({
+				initialize : function(){
+					this.set("message","KFC sucks");
+				}
+			});
+			
+			var PostLunchView = Backbone.View.extend({
+				el : "body",
+				events : {
+					"click #clickbutton" : "displayMessage"
+				},
+				displayMessage : function(){
+					$("#message").text($("#messagebox").val());
+				},
+				initialize : function(){
+					$("#postlunch").text(this.model.get("message"));
+				}
+			});
+			
+		</script>
+	</head>
+	<body>
+		<h1 id="postlunch"></h1>
+		<input type="text" id="messagebox" placeholder="some message">
+		<input type="button" value="Click" id="clickbutton">
+		<h2 id="message"></h2>	
+	</body>	
+</html>
+

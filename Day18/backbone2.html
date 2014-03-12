@@ -1,0 +1,31 @@
+<html>
+	<head>
+		<script src="jquery-2.1.0.min.js"></script>
+		<script src="underscore-min.js"></script>
+		<script src="backbone-min.js"></script>
+		<script>
+			$().ready(function(){
+				var av = new ActorsView({collection:ActorsCollection});
+				av.render();
+			});
+			var ActorsCollection = new Backbone.Collection([
+					{name:"Rajini"},
+					{name:"Kamal"},
+					{name:"SRK"},
+					{name:"HK"}
+				]);
+			var ActorsView = Backbone.View.extend({
+				el : "#actorsul",
+				render : function(){
+					var ulElem = $(this.el);
+					this.collection.each(function(item){
+						ulElem.append("<li>" + item.get("name") + "</li>");
+					});
+				}
+			});
+		</script>
+	</head>
+	<body>
+		<ul id="actorsul"></ul>
+	</body>
+</html>		
