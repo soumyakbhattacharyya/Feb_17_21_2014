@@ -1,0 +1,43 @@
+<html>
+	<head>
+		<script src="jquery-2.1.0.min.js"></script>
+		<script src="underscore-min.js"></script>
+		<script>
+
+			var actors = ["Rajni","Kamal","SRK","Salman"];
+
+			// display each name in a list (_.each)
+			$().ready(function(){
+				_.each(actors,function(val){
+					$("#actorsul").append("<li>" + val + "</li>");
+				});
+			});
+			
+			// display the names starting with S (_.filter)
+			var results = _.filter(actors,function(val){
+				return val.indexOf("S") == 0;
+			});
+			console.log(results);
+			
+			// display the names concatentated using hyphen (_.reduce)
+			var result = _.reduce(actors,function(str,val){
+				return val + "-" + str;
+			},"");
+			console.log(result.substr(0,result.length-1));
+			
+			var numbers = [12,16,75,4,131,442,34];
+			var sum = _.reduce(numbers,function(sum,num){return sum+num;},0);
+			console.log(sum);
+
+			// Convert the array into an array of JSON objects {name:"Rajni"} (_.map)
+			var actorObjects = _.map(actors,function(val){
+				return {name:val};
+			});
+			console.log(actorObjects);
+
+		</script>
+	</head>	
+	<body>
+		<ul id="actorsul"></ul>
+	</body>	
+</html>
