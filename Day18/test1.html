@@ -1,0 +1,48 @@
+<html>
+	<head>
+		<script>
+			function init(){
+				var Global = {
+					prodURL : ""
+				};
+
+				window.Global = {
+					prodURL : ""
+				};
+				window.Global = {};
+				Global.prodURL = "";
+				
+
+				var obj = new Object();
+				obj.name = "Ram";
+
+				var obj1 = {};
+				obj1.name = "Ram";
+
+				window.obj2 = {};
+				obj2.name = "Mary";
+
+				window.hello = "hello sam";
+				alert(window.hello);
+				alert(hello);
+
+				window.document.getElementById("section1");
+				window.localStorage.setItem("","");
+				window.sessionStorage.setItem("","");
+				//window.alert("");
+				
+				//Shortcuts
+				document.getElementById("section1");
+				localStorage.setItem("","");
+				sessionStorage.setItem("","");
+				//alert("");
+
+
+			}
+		</script>	
+	</head>
+	<body onload="init();">
+		<section id="section1">
+		</section>
+	</body>	
+</html>
