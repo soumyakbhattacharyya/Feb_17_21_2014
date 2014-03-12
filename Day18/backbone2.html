@@ -5,22 +5,37 @@
 		<script src="backbone-min.js"></script>
 		<script>
 			$().ready(function(){
-				var av = new ActorsView({collection:ActorsCollection});
+				var ac = new ActorsCollection();
+				var av = new ActorsView({collection:ac});
 				av.render();
 			});
+
+			var ActorsCollection = Backbone.Collection.extend({
+				url : "actors.json",
+				parse : function(response){
+					return response.actorsOfIndia;
+				}
+			});
+			/*
 			var ActorsCollection = new Backbone.Collection([
 					{name:"Rajini"},
 					{name:"Kamal"},
 					{name:"SRK"},
 					{name:"HK"}
 				]);
+			*/	
 			var ActorsView = Backbone.View.extend({
 				el : "#actorsul",
 				render : function(){
+					this.listenTo(this.collection,"sync",this.display)
+					this.collection.fetch();
+				},
+				display : function(){
 					var ulElem = $(this.el);
 					this.collection.each(function(item){
 						ulElem.append("<li>" + item.get("name") + "</li>");
 					});
+
 				}
 			});
 		</script>
