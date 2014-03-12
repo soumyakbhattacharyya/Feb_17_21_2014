@@ -1,0 +1,25 @@
+<html>
+	<head>
+		<script src="jquery-2.1.0.min.js"></script>
+		<script src="underscore-min.js"></script>
+		<script src="backbone-min.js"></script>
+		<script src="game.js"></script>
+		<script>
+			$().ready(function(){
+				var game = new MyGame.Game();
+				var gameView = new MyGame.GameView({model:game});
+			});
+			
+
+		</script>
+	</head>
+	<body>
+		<h1>Guessing game</h1>
+		<section id="guesssection">
+			<input type="text" id="guess" placeholder="Enter your guess">
+			<input type="button" value="Guess" id="guessbutton">
+			<h3 id="message"></h3>
+			<h3 id="attempts"></h3>
+		</section>	
+	</body>
+</html>		
