@@ -1,0 +1,60 @@
+<html>
+	<head>
+		<script src="jquery-2.1.0.min.js"></script>
+		<script src="underscore-min.js"></script>
+		
+
+		<script id="persontemplate" type="text/x-underscore-template">
+			<%
+			 var dt = new Date();
+			%>
+			<%= dt%>
+			<h1>Hi <%=name%></h1>
+		</script>
+		
+		<script id="actortemplate" type="text/x-underscore-template">
+			<li><%=name%></li>
+		</script>
+		
+		<script id="actortemplate2" type="text/x-underscore-template">
+			<%_.each(actors,function(item){%>
+				<li><%=item%></li>
+			<% });%>
+		</script>
+
+		<script>
+			var actors = ["Rajini","Kamal","SRK","Salman"];
+			$().ready(function(){
+				var actorTpl = _.template($("#actortemplate2").html());
+				var output = actorTpl();
+				$("#actorsul").append(output);
+
+
+				/*
+					var actorTpl = $("#actortemplate").html();
+					var compiledActorTpl = _.template(actorTpl);
+
+					_.each(actors,function(item){
+						$("#actorsul").append(compiledActorTpl({name:item}));
+					});
+				*/
+
+
+				var person = {name:"Sam"};
+				//var tpl = "<h1>Hi <%=name%></h1>";
+				var tpl = $("#persontemplate").html();
+				var compiledTpl = _.template(tpl);
+				var output = compiledTpl(person);
+				$("section").html(output);
+
+
+//				var tpl = "<h1>Hello Sam</h1>";
+//				$("section").html(tpl);
+			});
+		</script>
+	</head>
+	<body>
+		<section></section>
+		<ul id="actorsul"></ul>
+	</body>
+</html>		
