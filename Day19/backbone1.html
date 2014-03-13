@@ -6,8 +6,13 @@
 		<script src="backbone-min.js"></script>
 		<script>
 			Backbone.emulateJSON = true;
+
 			$().ready(function(){
+				var guestBookCollectionInstance = new GuestBookCollection();
+
 				var guestBookViewInstance = new GuestBookView();
+				var guestListViewInstance = new GuestListView({collection:guestBookCollectionInstance});
+
 			});
 			var GuestModel = Backbone.Model.extend({
 				defaults : {
@@ -44,9 +49,32 @@
 
 				}
 			});
-			//Create a view class called GuestBookView and 
-			//register the addbutton with a event handler for click
 
+			var GuestBookCollection = Backbone.Collection.extend({
+				model : GuestModel,
+				url : "GuestBook",
+				parse : function(response){
+					return response.guestbook;
+				}
+			});
+
+			var GuestListView = Backbone.View.extend({
+				el : "#guestbook",
+				events : {
+					"click #listbutton" : "displayAllGuests"
+				},
+				initialize : function(){
+					this.listenTo(this.collection,"sync",this.display)
+				},
+				displayAllGuests : function(){
+					this.collection.fetch();
+				},
+				display : function(){
+					this.collection.each(function(item){
+						console.log(item.get("name") + ", " + item.get("comments"));
+					});
+				}
+			});
 		</script>
 	</head>
 	<body>
@@ -56,5 +84,15 @@
 			<textarea id="comments" placeholder="comments"></textarea><br/>
 			<input type="button" value="Add" id="addbutton">
 		</section>	
+		<section id="guestbook">
+			<input type="button" value="List" id="listbutton"><br/>
+			<ul id="guestsul"></ul>
+		</section>	
+
+
+
+
+
+
 	</body>	
 </html>
