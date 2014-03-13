@@ -15,6 +15,15 @@
 				<p style="color:blue;"><%=comments%></p>
 			</li>
 		</script>
+		<script id="guestbooktemplate" type="text/x-underscore-template">
+			<%_.each(guestbook,function(item){%>
+			<li>
+				<%=item.name%><br/>
+				<p style="color:red;"><%=item.address%></p>
+				<p style="color:blue;"><%=item.comments%></p>
+			</li>
+			<%});%>
+		</script>
 	</head>
 	<body>
 		<section data-role="page">
