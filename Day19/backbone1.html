@@ -4,6 +4,10 @@
 		<script src="jquery-2.1.0.min.js"></script>
 		<script src="underscore-min.js"></script>
 		<script src="backbone-min.js"></script>
+		<script src="models.js"></script>
+		<script src="collections.js"></script>
+		<script src="views.js"></script>
+
 		<script>
 			Backbone.emulateJSON = true;
 
@@ -12,68 +16,6 @@
 
 				var guestBookViewInstance = new GuestBookView();
 				var guestListViewInstance = new GuestListView({collection:guestBookCollectionInstance});
-
-			});
-			var GuestModel = Backbone.Model.extend({
-				defaults : {
-					name : "",
-					address : "",
-					comments : ""
-				},
-				url : "GuestBook"
-			});
-
-			var GuestBookView = Backbone.View.extend({
-				el : "#addguest",
-				events : {
-					"click #addbutton" : "addButtonClicked",
-					"click #deletebutton" : "deleteButtonClicked",
-					"focus #name" : "textFocus",
-					"blur #name" : "textBlur"
-				},
-				addButtonClicked : function(){
-					var guest = new GuestModel();
-					guest.set("name",$("#name").val());
-					guest.set("address",$("#address").val());
-					guest.set("comments",$("#comments").val());
-					guest.save();
-				},
-				textBlur : function(e){
-					console.log(e);
-					$("#name").css("background-color","white");
-				},
-				textFocus : function(){
-					$("#name").css("background-color","yellow");
-				},
-				deleteButtonClicked : function(){
-
-				}
-			});
-
-			var GuestBookCollection = Backbone.Collection.extend({
-				model : GuestModel,
-				url : "GuestBook",
-				parse : function(response){
-					return response.guestbook;
-				}
-			});
-
-			var GuestListView = Backbone.View.extend({
-				el : "#guestbook",
-				events : {
-					"click #listbutton" : "displayAllGuests"
-				},
-				initialize : function(){
-					this.listenTo(this.collection,"sync",this.display)
-				},
-				displayAllGuests : function(){
-					this.collection.fetch();
-				},
-				display : function(){
-					this.collection.each(function(item){
-						console.log(item.get("name") + ", " + item.get("comments"));
-					});
-				}
 			});
 		</script>
 	</head>
