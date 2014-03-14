@@ -1,0 +1,40 @@
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="touch/resources/css/sencha-touch.css">
+		<script src="touch/sencha-touch-all.js"></script>
+		<script>
+			var tb = {
+						xtype : "textfield",
+						label:"Name",
+						id : "name"
+					 };
+			//WRONG		 
+			//Ext.create("button",{});
+			/*{
+				xtype : "Ext.Button"
+			}*/
+
+
+			Ext.application({
+				launch : function(){
+					Ext.create("Ext.Panel",{
+						items : [
+							tb,
+							{
+								xtype : "button",
+								text:"Click",
+								listeners : {
+									tap : function(){
+										var name = Ext.getCmp("name");
+										alert(name.getValue());
+									}
+								}
+							}
+						],
+						fullscreen : true,
+					});
+				}
+			});
+		</script>
+	</head>	
+</html>
