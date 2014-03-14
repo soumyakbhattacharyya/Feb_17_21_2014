@@ -10,7 +10,11 @@
 						country : Ext.getCmp("country").getValue()
 					},
 					success : function(xhr){
-						Ext.getCmp("message").setHtml(xhr.responseText);
+						var response = xhr.responseText;
+						var jsonObj = Ext.JSON.decode(response);
+						Ext.getCmp("message").setHtml(jsonObj.capital);
+						
+						//Ext.getCmp("message").setHtml(xhr.responseText);
 					}
 				});
 			}
