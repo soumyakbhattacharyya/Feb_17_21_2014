@@ -1,0 +1,25 @@
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="touch/resources/css/sencha-touch.css">
+		<script src="touch/sencha-touch-all.js"></script>
+		<script>
+			//Ext.application(...);
+			//Ext.create("Ext")
+			
+			Ext.define("Person",{
+				singleton : true,
+				eat : function(){
+					console.log("Eating");
+				},
+				sleep : function(){
+					console.log("Sleeping");
+				}
+			});
+			Person.eat();
+			Person.sleep();
+			//var p1 = Ext.create("Person");
+			//p1.eat();
+			//p1.sleep();
+		</script>
+	</head>
+</html>		
