@@ -1,0 +1,35 @@
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="touch/resources/css/sencha-touch.css">
+		<script src="touch/sencha-touch-all.js"></script>
+		<script>
+			Ext.define("Book",{
+				config : {
+					title : "",
+					price : 100,
+					authors : []	
+				},
+				buy : function(store){
+					console.log("Buying " + this.getTitle() + " from " + store);
+				},
+				constructor : function(data){
+					this.initConfig(data);
+				}
+			});
+			var b1 = Ext.create("Book",{
+				title : "ABC",
+				authors : ["X","Y"]
+			});
+			b1.buy("Amazon");
+			console.log(b1.getTitle() + ", " + b1.getAuthors());
+
+
+
+
+
+
+
+
+		</script>
+	</head>
+</html>		
