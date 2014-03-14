@@ -10,19 +10,21 @@
 				constructor : function(cfg){
 					this.initConfig(cfg);
 				},
-				work : function(){
-					console.log("Employee " + this.getName() + " is yawning");
+				work : function(hours){
+					console.log("Employee " + this.getName() + " is yawning " + hours);
 				}
 			});
 			Ext.define("Manager",{
 				extend : "Employee",
 				config : { stock : 100 },
-				work :function(){
-					console.log("Manager " + this.getName() + " is snoring");
+				work :function(hours){
+					this.callParent(arguments);
+					//this.callParent([hours+1]);
+					console.log("Manager " + this.getName() + " is snoring " + hours);
 				}
 			});
 			var m1 = Ext.create("Manager",{name:"Sam",salary:200000});
-			m1.work();
+			m1.work(12);
 
 			Ext.define("Person",{
 				statics : {

@@ -18,10 +18,30 @@
 					this.setBalance(this.getBalance() - amount);
 				}
 			});
-			
-			var acc1 = Ext.create("Account",{accountNumber:"21212121"});
+			Ext.define("SavingsAccount",{
+				extend : "Account",
+				config : {
+					withdrawCount : 0
+				},
+				withdraw : function(amount){
+					this.setWithdrawCount(this.getWithdrawCount() + 1);
+					if(this.getWithdrawCount() > 5){
+						var interest = (amount/100)*(0.1);
+						console.log("Charging interest of " + interest);
+						amount += interest;
+					}
+					this.callParent([amount]);
+				}
+			});
+			var acc1 = Ext.create("SavingsAccount",{accountNumber:"21212121"});
 			acc1.deposit(1000);
 			acc1.withdraw(100);
+			acc1.withdraw(100);
+			acc1.withdraw(100);
+			acc1.withdraw(100);
+			acc1.withdraw(100);
+			acc1.withdraw(1000);
+			acc1.withdraw(1000);
 			console.log("Balance: " + acc1.getBalance());
 
 
