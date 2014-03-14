@@ -1,1 +1,45 @@
-ajax.html
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="touch/resources/css/sencha-touch.css">
+		<script src="touch/sencha-touch-all.js"></script>
+		<script>
+			function getInfo(){
+				Ext.Ajax.request({
+					url : "world.jsp",
+					params : {
+						country : Ext.getCmp("country").getValue()
+					},
+					success : function(xhr){
+						Ext.getCmp("message").setHtml(xhr.responseText);
+					}
+				});
+			}
+			Ext.application({
+				launch : function(){
+					Ext.create("Ext.Panel",{
+						fullscreen : true,
+						items : [
+							{
+								xtype : "titlebar", title : "AJAX",
+								titleAlign : "center", height : "5%"
+							},
+							{
+								xtype : "textfield",placeHolder:"country",
+								id : "country"
+							},
+							{
+								xtype : "button", text : "Get info",
+								listeners : {
+									tap : getInfo
+								}
+							},
+							{
+								xtype : "label", id : "message", html : ""
+							}
+						]
+				});					
+			}
+		});
+		</script>
+	</head>
+</html>		
