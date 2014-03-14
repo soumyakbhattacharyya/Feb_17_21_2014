@@ -1,0 +1,40 @@
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="touch/resources/css/sencha-touch.css">
+		<script src="touch/sencha-touch-all.js"></script>
+		<script>
+			Ext.define("Employee",{
+				config : {
+					name : "", salary : 10000
+				},
+				constructor : function(cfg){
+					this.initConfig(cfg);
+				},
+				work : function(){
+					console.log("Employee " + this.getName() + " is yawning");
+				}
+			});
+			Ext.define("Manager",{
+				extend : "Employee",
+				config : { stock : 100 },
+				work :function(){
+					console.log("Manager " + this.getName() + " is snoring");
+				}
+			});
+			var m1 = Ext.create("Manager",{name:"Sam",salary:200000});
+			m1.work();
+
+			Ext.define("Person",{
+				statics : {
+					numberOfPersons : 0
+				},
+				constructor : function(){
+					this.statics().numberOfPersons++;
+				}
+			});			
+			var p1 = Ext.create("Person");
+			var p2 = Ext.create("Person");
+			console.log(Person.numberOfPersons);
+		</script>
+	</head>	
+</html>	
