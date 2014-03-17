@@ -1,0 +1,8 @@
+{
+	"festivalsAllOver" : [
+		{ "festival" :"Holi","location":"North India"},
+		{ "festival" : "Diwali", "location":"India"},
+		{ "festival" : "Ramzan", "location":"UAE"},
+		{ "festival" : "Christmas", "location":"US"}
+	 ]
+}

@@ -1,0 +1,37 @@
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="touch/resources/css/sencha-touch.css">
+		<script src="touch/sencha-touch-all.js"></script>	
+		<script>
+			//Ext.data.Store
+			Ext.define("FestivalStore",{
+				extend : "Ext.data.Store",
+				config : {
+					data : [
+						{ festival :"Holi",location:"North India"},
+						{ festival : "Diwali", location:"India"},
+						{ festival : "Ramzan", location:"UAE"}
+					]
+				}
+			});
+			var festivalStore = Ext.create("FestivalStore");
+			Ext.application({
+				launch : function(){
+					Ext.create("Ext.List",{
+						fullscreen : true,
+						store : festivalStore,
+						itemTpl : "{festival}"
+					});
+				}
+			});
+
+
+
+
+
+
+
+
+		</script>
+	</head>
+</html>		
