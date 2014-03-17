@@ -3,15 +3,32 @@
 		<link rel="stylesheet" type="text/css" href="touch/resources/css/sencha-touch.css">
 		<script src="touch/sencha-touch-all.js"></script>	
 		<script>
-			//Ext.data.Store
+			Ext.define("Festival",{
+				extend : "Ext.data.Model",
+				config : {
+					idProperty : "festival",
+					fields : ["festival","location"]
+				}
+			});
 			Ext.define("FestivalStore",{
 				extend : "Ext.data.Store",
 				config : {
-					data : [
+					model : "Festival",
+					//fields : ["festival","location"],
+					autoLoad : true,
+					proxy : {
+						type : "ajax",
+						url  : "festivals.json",
+						reader : {
+							type : "json",
+							rootProperty : "festivalsAllOver"
+						}
+					}
+					/*data : [
 						{ festival :"Holi",location:"North India"},
 						{ festival : "Diwali", location:"India"},
 						{ festival : "Ramzan", location:"UAE"}
-					]
+					]*/
 				}
 			});
 			var festivalStore = Ext.create("FestivalStore");
@@ -20,7 +37,21 @@
 					Ext.create("Ext.List",{
 						fullscreen : true,
 						store : festivalStore,
-						itemTpl : "{festival}"
+						listeners : {
+							itemtap : function(a,index){
+								index++;
+								if(index == festivalStore.getCount())
+									index = 0;
+								var record = festivalStore.getAt(index);
+								console.log(record.get("festival"));
+							}
+/*							itemtap : function(a,b,c,record){
+								console.log(record.get("festival"));
+								console.log(record.get("location"));	
+							}
+*/							
+						},
+						itemTpl : "<b>{festival}</b>,<i>{location}</i>"
 					});
 				}
 			});
