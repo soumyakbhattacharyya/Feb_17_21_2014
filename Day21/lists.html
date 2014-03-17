@@ -1,0 +1,100 @@
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="touch/resources/css/sencha-touch.css">
+		<script src="touch/sencha-touch-all.js"></script>	
+		<script>
+			Ext.define("Contact",{
+				extend : "Ext.data.Model",
+				config : {
+					fields : ["name","phone"]
+				}
+			});
+			Ext.define("ContactStore",{
+				extend : "Ext.data.Store",
+				config : {
+					model : "Contact"
+				}
+			});
+			var contactStore = Ext.create("ContactStore");
+			var addContactPanel;
+			function addToContactList(){
+				contactStore.add({
+					name : Ext.getCmp("name").getValue(),
+					phone : Ext.getCmp("phone").getValue()
+				});
+				Ext.getCmp("name").setValue("");
+				Ext.getCmp("phone").setValue("");
+				addContactPanel.hide();
+			}
+			function addContact(src){
+				if(addContactPanel == undefined){
+					addContactPanel = Ext.create("Ext.Panel",{
+						height : "28%", width : "60%",
+						items : [
+							{
+								xtype : "textfield",
+								placeHolder : "name",
+								margin : "2",
+								id : "name"
+							},
+							{
+								xtype : "textfield",
+								placeHolder : "phone",
+								id : "phone",
+								margin : "2",
+							},
+							{
+								xtype : "button",
+								text : "Add",
+								margin : "2",ui:"action",
+								listeners : {
+									tap : addToContactList
+								}
+							}
+						]
+					});
+				}
+				addContactPanel.showBy(src);
+			}
+			Ext.application({
+				launch : function(){
+					Ext.create("Ext.Panel",{
+						fullscreen : true,
+						items : [
+							{
+								xtype : "titlebar",
+								title : "Contacts",
+								titleAlign : "center",
+								height : "3%",
+								items : [
+									{
+										xtype : "button",
+										text : "+",align:"right",
+										listeners : {
+											tap : addContact
+										}
+									}
+								]
+							},
+							{
+								xtype : "list",
+								store : contactStore,
+								itemTpl : "{name} ({phone})",
+								listeners : {
+									itemtaphold : function(a,b,c,record){
+										Ext.Msg.setHeight("20%");
+										Ext.Msg.confirm("Do you want to delete?","",function(btnId){
+												if(btnId == "yes"){
+													contactStore.remove(record);
+												}	
+										});
+									}
+								}
+							}
+						]
+					});
+				}
+			});
+		</script>
+	</head>
+</html>		
