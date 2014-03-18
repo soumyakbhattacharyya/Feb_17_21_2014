@@ -1,0 +1,39 @@
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="touch/resources/css/sencha-touch.css">
+		<script src="touch/sencha-touch-all.js"></script>	
+		<script>
+			Ext.application({
+				launch : function(){
+					//Viewport is a Panel with Card layout
+					//Created automatically on application launch
+
+					Ext.Viewport.add([{
+						xtype : "panel",
+						items : [
+							{
+								xtype : "textfield",
+								placeHolder : "Name"
+							},
+							{
+								xtype : "button",
+								text : "Click"
+							}
+						]
+					}]);
+					Ext.Viewport.add({
+						xtype : "panel",
+						items : [
+							
+							{
+								xtype : "button",
+								text : "This is panel 2"
+							}
+						]
+					});
+					Ext.Viewport.setActiveItem(1);
+				}
+			});
+		</script>
+	</head>
+</html>
