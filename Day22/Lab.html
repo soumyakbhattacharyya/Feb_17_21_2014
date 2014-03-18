@@ -1,0 +1,115 @@
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="touch/resources/css/sencha-touch.css">
+		<script src="touch/sencha-touch-all.js"></script>	
+		<script>
+			Ext.application({
+				launch : function(){
+					Ext.Viewport.add({xtype:"welcome"});
+					Ext.Viewport.add({xtype:"game"});
+					Ext.Viewport.add({xtype:"weather"});
+				}
+			});
+			Ext.define("Footer",{
+				extend : "Ext.TitleBar",
+				xtype : "footer",
+				config : {
+					height : "3%",
+					docked : "bottom",
+					items : [
+						{
+							xtype : "button", text : "Home",
+							align : "right",
+							listeners : {
+								tap : function(){
+									Ext.Viewport.setActiveItem(0);
+								}
+							}
+						}
+					]
+				}
+			});
+
+			Ext.define("WelcomeScreen",{
+				extend : "Ext.Panel",
+				xtype : "welcome",
+				config : {
+					items : [
+						{
+							xtype : "panel",
+							height : "30%",
+							defaults : {
+								xtype : "button",
+								height : "30%",
+								width : "50%",
+								margin : 2
+							},
+							layout : "hbox",
+							items : [
+								{
+									text:"Game",
+									listeners : {
+										tap : function(){
+											Ext.Viewport.setActiveItem(1);
+										}
+									}
+								},
+								{
+									text:"Weather",
+									listeners : {
+										tap : function(){
+											Ext.Viewport.setActiveItem(2);
+										}
+									}
+								}
+							]
+						},
+						{
+							xtype : "carousel",height : "60%",
+							items : [
+								{html:"Guessing game"},
+								{html:"Weather information of major cities"}
+							]
+						}
+					]
+				}
+			});
+
+			Ext.define("GameScreen",{
+				extend : "Ext.Panel",
+				xtype : "game",
+				config : {
+					items : [
+						{xtype:"footer"},
+						{
+							xtype : "titlebar",
+							title : "Game",
+							titleAlign : "center",
+							height : "3%"
+						}
+					]
+				}
+			});
+
+			Ext.define("WeatherScreen",{
+				extend : "Ext.Panel",
+				xtype : "weather",
+				config : {
+					items : [
+						{xtype:"footer"},
+						{
+							xtype : "titlebar",
+							title : "Weather",
+							titleAlign : "center",
+							height : "3%"
+						},
+						{
+							xtype : "list",
+							store : null
+						}
+					]
+				}
+			});
+		</script>
+	</head>	
+</html>	
