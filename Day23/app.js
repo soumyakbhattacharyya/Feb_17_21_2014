@@ -4,8 +4,8 @@
 Ext.application({
 	name : "Wednesday",
 	appFolder : "app",
-	controllers : ["AuthenticationController"],
-	views : ["LoginScreen"],
+	controllers : ["AuthenticationController","HomeController"],
+	views : ["LoginScreen","Footer","HomeScreen","GameScreen","WeatherScreen"],
 	models : [],
 	stores : [],
 	launch : function(){

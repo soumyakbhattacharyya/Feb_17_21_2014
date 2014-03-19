@@ -5,11 +5,11 @@ Ext.define("Wednesday.view.LoginScreen",{
 		items : [
 			{
 				xtype : "textfield", id:"username",
-				placeHolder : "User name"
+				placeHolder : "User name",value:"admin"
 			},
 			{
 				xtype : "passwordfield", id:"password",
-				placeHolder : "Password"
+				placeHolder : "Password",value:"admin"
 			},
 			{
 				xtype : "button", id:"loginbutton",

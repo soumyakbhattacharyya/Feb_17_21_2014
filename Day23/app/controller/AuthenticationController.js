@@ -1,6 +1,10 @@
 Ext.define("Wednesday.controller.AuthenticationController",{
 	extend : "Ext.app.Controller",
 	config : {
+		refs : {
+			"userName" : "#username",
+			"pwd" : "#password"
+		},
 		control : {
 			"#loginbutton" : {
 				tap : "onLoginButtonTapped"
@@ -8,6 +12,12 @@ Ext.define("Wednesday.controller.AuthenticationController",{
 		}
 	},
 	onLoginButtonTapped : function(){
-		alert("Tapped");
+		if(this.getUserName().getValue() == "admin" && 
+			this.getPwd().getValue() == "admin"){
+			Ext.Viewport.setActiveItem({ xtype:"homescreen",id:"home" })
+		}
+		else
+			Ext.Msg.alert("Invalid credentials");
+
 	}
 });
