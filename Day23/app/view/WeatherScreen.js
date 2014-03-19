@@ -10,6 +10,11 @@ Ext.define("Wednesday.view.WeatherScreen",{
 				height : "3%"
 			},
 			{
+				xtype : "list",
+				store : "FestivalStore",
+				itemTpl : "{festival}"
+			},
+			{
 				xtype : "footer"
 			}
 		]

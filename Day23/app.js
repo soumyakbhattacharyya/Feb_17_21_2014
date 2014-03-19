@@ -4,10 +4,10 @@
 Ext.application({
 	name : "Wednesday",
 	appFolder : "app",
-	controllers : ["AuthenticationController","HomeController"],
-	views : ["LoginScreen","Footer","HomeScreen","GameScreen","WeatherScreen"],
-	models : [],
-	stores : [],
+	controllers : ["AuthenticationController","HomeController","FestivalController"],
+	views : ["LoginScreen","Footer","HomeScreen","GameScreen","WeatherScreen","FestivalDetailsScreen"],
+	models : ["Festival"],
+	stores : ["FestivalStore"],
 	launch : function(){
 		Ext.Viewport.add({xtype:"loginscreen"});
 	}
