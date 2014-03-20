@@ -1,3 +1,13 @@
+http://healthycodemagazine.com
+
+http://www.durasoftindia.com/videos.html
+prabhu@durasoftindia.com
+prabhu.bits@gmail.com
+http://facebook.com/healthycoder
+http://healthycoder.in
+http://github.com/prabhu-durasoft
+
+
 ->cordova (old name is PhoneGap)
 ->It is used to generate native apps that can run on Android, iOS, Windows Phone ..etc.
 ->Create a Sencha Touch or jQM project
