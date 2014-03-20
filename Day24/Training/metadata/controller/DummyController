@@ -1,0 +1,46 @@
+{
+    "type": "Ext.app.Controller",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "DummyController"
+    },
+    "designerId": "8a660d3f-bc8a-4bcb-82b6-da0ad5285177",
+    "cn": [
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "userName",
+                "selector": "#username"
+            },
+            "designerId": "c68da146-edf4-4611-adf0-054dcedb4399"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "#loginbutton",
+                "designer|targetType": "Ext.Button",
+                "fn": "onLoginButtonTapped",
+                "implHandler": [
+                    "if(this.getUserName().getValue() == \"admin\")",
+                    "    alert(\"Cool\");"
+                ],
+                "name": "tap"
+            },
+            "designerId": "9f5d9651-00c9-4826-8281-a004198ef737"
+        }
+    ]
+}

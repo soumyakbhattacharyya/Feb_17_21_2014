@@ -1,0 +1,63 @@
+{
+    "type": "Ext.app.Controller",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "AuthController"
+    },
+    "designerId": "930d46f4-d9d6-49b0-a8d1-033543f68aab",
+    "cn": [
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "userName",
+                "selector": "#username"
+            },
+            "designerId": "fb827a2b-f5d0-4c40-ae12-38888c0687b5"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "password",
+                "selector": "#password"
+            },
+            "designerId": "2da3eb56-bfdc-40d9-b926-856075b74ac3"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "#loginbutton",
+                "designer|targetType": "Ext.Button",
+                "fn": "onLoginButtonTapped",
+                "implHandler": [
+                    "if(this.getUserName().getValue() == \"admin\" && this.getPassword().getValue() == \"admin\"){",
+                    "    alert(\"Cool\");",
+                    "}",
+                    "else",
+                    "    alert(\"Invalid credentials\");",
+                    ""
+                ],
+                "name": "tap"
+            },
+            "designerId": "b34e9ed2-811f-46fd-9842-09b7db243918"
+        }
+    ]
+}

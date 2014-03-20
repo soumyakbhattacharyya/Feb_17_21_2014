@@ -1,0 +1,43 @@
+<!DOCTYPE HTML>
+
+<html manifest="cache.appcache" lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <title>Training</title>
+    <script src="cordova.js"></script>
+    <script>
+        document.addEventListener("deviceready", onDeviceReady, false);
+        
+        // device APIs are available
+        //
+        function onDeviceReady() {
+            var myContact = navigator.contacts.create({"displayName": "Test User"});
+            myContact.note = "This contact has a note.";
+          alert("The contact, " + myContact.displayName + ", note: " + myContact.note);
+        }
+    
+        function contacts(){
+            var myContact = navigator.contacts.create({"displayName": "Test User"});
+            alert("Done");
+        }
+        function pic(){
+            alert("test");
+            navigator.camera.getPicture(function(){
+                                        alert("Success");
+                                        }, function(){
+                                        alert("Error");
+                                        }, { quality: 50,
+                                        destinationType: Camera.DestinationType.DATA_URL
+                                        });
+
+        }
+  </script>
+</head>
+<body>
+        <div>Hello</div>
+       <input type="button" value="add contact" id="contactsbutton" onclick="contacts();">
+     <input type="button" value="Click" id="picbutton" onclick="pic();">
+       <div></div>
+        <div></div>
+</body>
+</html>

@@ -1,0 +1,75 @@
+{
+    "type": "Ext.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|initialView": true,
+        "designer|userClassName": "LoginScreen"
+    },
+    "designerId": "72cc0d3d-aa1c-4e9c-a67e-ac0f28807cb7",
+    "cn": [
+        {
+            "type": "Ext.TitleBar",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "docked": "top",
+                "title": "Training"
+            },
+            "designerId": "f6486228-e39b-4217-b6f1-767dc7f20f75"
+        },
+        {
+            "type": "Ext.field.Text",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "id": "username",
+                "label": "",
+                "margin": 5,
+                "placeHolder": "User name"
+            },
+            "designerId": "d20120f5-74ad-4e57-882f-039a7254dab3"
+        },
+        {
+            "type": "Ext.field.Password",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "id": "password",
+                "label": "",
+                "margin": 5,
+                "placeHolder": "Password"
+            },
+            "designerId": "f44dab26-5f71-4a95-9af0-7e3387a7754a"
+        },
+        {
+            "type": "Ext.Button",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|uiInterfaceName": "confirm",
+                "id": "loginbutton",
+                "margin": 60,
+                "text": "Login",
+                "ui": "confirm",
+                "width": "50%"
+            },
+            "designerId": "ef89c78d-06d8-4754-9661-14734551030e"
+        }
+    ]
+}

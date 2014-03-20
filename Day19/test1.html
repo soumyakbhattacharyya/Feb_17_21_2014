@@ -1,0 +1,61 @@
+<html>
+	<head>
+		<script src="jquery-2.1.0.min.js"></script>
+		<script src="underscore-min.js"></script>
+		<script src="backbone-min.js"></script>
+		<script>
+			$().ready(function(){
+				Backbone.emulateJSON = true;
+				var guest = new Guest();
+				var guestCollection = new GuestCollection();
+				var guestBookList = new GuestBookList({model:guest,collection:guestCollection});
+			});
+			var Guest = Backbone.Model.extend({
+				defaults : {
+					name : "TestN", 
+					comments : "TestC",
+					address : "TestA"
+				},
+				url : "GuestBook"
+			});
+			var GuestCollection = Backbone.Collection.extend({
+				model : Guest,
+				url : "GuestBook",
+				parse : function(response){
+					console.log(response);
+					return response.guestbook;
+				}
+			});
+			var GuestBookList = Backbone.View.extend({
+				el : "body",
+				events : {
+					"click #addbtn" : "addGuest",
+					"click #listbtn" : "listGuests"
+				},
+				initialize : function(){
+					this.collection.fetch();
+					this.listenTo(this.collection,"add",this.guestAdded);
+				},
+				addGuest : function(){
+					//this.model.save();
+					var g = new Guest();
+					//g.save();
+					this.collection.add(g);
+					this.collection.sync({url:"hello"});
+				},
+				guestAdded : function(){
+					console.log("added");
+				},
+				listGuests : function(){
+					this.collection.fetch();
+				}
+			}); 
+
+		</script>
+	</head>
+	<body>
+		<input type="button" id="addbtn" value="Add">
+		<input type="button" id="listbtn" value="List">
+		<ul id="#guestul"></ul>
+	</body>	
+</html>

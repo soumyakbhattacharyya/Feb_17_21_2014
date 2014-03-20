@@ -1,0 +1,46 @@
+->cordova (old name is PhoneGap)
+->It is used to generate native apps that can run on Android, iOS, Windows Phone ..etc.
+->Create a Sencha Touch or jQM project
+—>Develop the application by writing JS code
+—>Deploy it in a web server
+->What you have is a MOBILE WEB Application
+->BUT you need to convert it to a native app
+
+TWO WAYS AVAILABLE
+
+1) Go to build.phonegap.com and upload your code as a zip file
+http://cordova.apache.org/docs/en/3.4.0/
+2) Download Cordova to your machine; Install it; Create a Cordova project; Copy your SENCHA/jQM code to WWW folder
+3)Build the project; It will generate a native app
+Install NodeJS
+Run npm install -g cordova from command prompt
+cordova create ProjectName
+	Navigate to ProjectName folder
+cordova platform add android or iOS or blackberry 
+cordova build
+
+
+
+
+
+
+
+
+
+
+download ADT bundle
+Download ANT 
+add ant/bin folder to path
+add adt-bundle/sdk/platform-tools to path
+add adt-bundle/sdk/tools to path
+
+
+
+******************
+Ruby (Prog. language/ interpreter)
+
+Sencha Cmd (Command line tool for generating/building/deploying Sencha applications)
+
+Sencha Architect(UI tool for generating/building/deploying Sencha applications)
+
+Themes in Sencha use SASS

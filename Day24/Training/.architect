@@ -1,0 +1,79 @@
+{
+    "expandedState": {
+        "data": true,
+        "model": true,
+        "component": true,
+        "controller": true,
+        "resource": true,
+        "72cc0d3d-aa1c-4e9c-a67e-ac0f28807cb7": {
+            "id": "72cc0d3d-aa1c-4e9c-a67e-ac0f28807cb7",
+            "expanded": false,
+            "cn": [
+                {
+                    "id": "f6486228-e39b-4217-b6f1-767dc7f20f75"
+                },
+                {
+                    "id": "d20120f5-74ad-4e57-882f-039a7254dab3"
+                },
+                {
+                    "id": "f44dab26-5f71-4a95-9af0-7e3387a7754a"
+                },
+                {
+                    "id": "ef89c78d-06d8-4754-9661-14734551030e"
+                }
+            ]
+        },
+        "930d46f4-d9d6-49b0-a8d1-033543f68aab": {
+            "id": "930d46f4-d9d6-49b0-a8d1-033543f68aab",
+            "expanded": false,
+            "cn": [
+                {
+                    "id": "fb827a2b-f5d0-4c40-ae12-38888c0687b5"
+                },
+                {
+                    "id": "2da3eb56-bfdc-40d9-b926-856075b74ac3"
+                },
+                {
+                    "id": "b34e9ed2-811f-46fd-9842-09b7db243918"
+                }
+            ]
+        },
+        "8a660d3f-bc8a-4bcb-82b6-da0ad5285177": {
+            "id": "8a660d3f-bc8a-4bcb-82b6-da0ad5285177",
+            "cn": [
+                {
+                    "id": "c68da146-edf4-4611-adf0-054dcedb4399"
+                },
+                {
+                    "id": "9f5d9651-00c9-4826-8281-a004198ef737"
+                }
+            ]
+        },
+        "f41905c8-22c2-458f-a9f7-b09b88cfa4e6": {
+            "id": "f41905c8-22c2-458f-a9f7-b09b88cfa4e6"
+        },
+        "6d0ff2f2-d8ee-40ac-978e-deb24ff62928": {
+            "id": "6d0ff2f2-d8ee-40ac-978e-deb24ff62928"
+        },
+        "4c4f222a-0e84-4fd3-b5b4-b35ec65f01f8": {
+            "id": "4c4f222a-0e84-4fd3-b5b4-b35ec65f01f8"
+        }
+    },
+    "tabState": {
+        "openTabs": []
+    },
+    "canvasState": {
+        "topInstance": null
+    },
+    "inspectorState": {
+        "topInstance": "72cc0d3d-aa1c-4e9c-a67e-ac0f28807cb7",
+        "selectedInstance": "72cc0d3d-aa1c-4e9c-a67e-ac0f28807cb7"
+    },
+    "codeState": {
+        "topInstance": "72cc0d3d-aa1c-4e9c-a67e-ac0f28807cb7"
+    },
+    "editMode": "code",
+    "userSettings": {
+        "no-cmd": false
+    }
+}

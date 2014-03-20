@@ -1,0 +1,56 @@
+{
+    "name": "Training",
+    "settings": {
+        "cmd": {
+            "license": "commercial",
+            "cmdVersion": "4.0.3.74",
+            "frameworkVersion": "2.3.1.410"
+        },
+        "canvasControls": {
+            "viewportSize": {
+                "name": "iPhone 5",
+                "builtIn": true,
+                "height": 568,
+                "width": 320
+            },
+            "viewportOrientation": "portrait"
+        },
+        "urlPrefix": "",
+        "exportPath": "",
+        "spacesToIndent": 4,
+        "sdkPath": "",
+        "lineEnding": "LF",
+        "genTimestamps": false,
+        "cacheBust": false,
+        "buildShouldOverwriteIndex": true,
+        "generateArchitectVersion": true,
+        "lastBuildSelection": {
+            "value": "androidSimulate",
+            "display": "Simulate on Android"
+        }
+    },
+    "xdsVersion": "3.0.3",
+    "xdsBuild": 1382,
+    "schemaVersion": 1,
+    "upgradeVersion": 300000000004,
+    "framework": "touch23",
+    "viewOrderMap": {
+        "view": [
+            "72cc0d3d-aa1c-4e9c-a67e-ac0f28807cb7"
+        ],
+        "store": [],
+        "controller": [
+            "930d46f4-d9d6-49b0-a8d1-033543f68aab",
+            "8a660d3f-bc8a-4bcb-82b6-da0ad5285177"
+        ],
+        "model": [],
+        "resource": [
+            "f41905c8-22c2-458f-a9f7-b09b88cfa4e6",
+            "6d0ff2f2-d8ee-40ac-978e-deb24ff62928",
+            "4c4f222a-0e84-4fd3-b5b4-b35ec65f01f8"
+        ],
+        "app": [
+            "application"
+        ]
+    }
+}

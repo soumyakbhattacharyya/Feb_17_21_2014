@@ -1,0 +1,44 @@
+{
+    "type": "packagesetting",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "androidAPILevel": "19",
+        "applicationId": "com.mycompany.myAppID",
+        "applicationName": "Training",
+        "certificateAlias": "EmptyValue",
+        "certificatePassword": "helloworld",
+        "certificatePath": "/Users/prabhus/cert1.cer",
+        "configuration": "Debug",
+        "designer|userClassName": "packager",
+        "deviceType": "iphone",
+        "icon": [
+            "{\"36\":\"resources/icons/Icon_Android36.png\",\"48\":\"resources/icons/Icon_Android48.png\",\"72\":\"resources/icons/Icon~ipad.png\"}"
+        ],
+        "inputPath": "./",
+        "orientations": [
+            "portrait",
+            "portraitUpsideDown",
+            "landscapeLeft",
+            "landscapeRight"
+        ],
+        "outputPath": "../build/",
+        "permissions": [
+            "INTERNET",
+            "ACCESS_NETWORK_STATE",
+            "CAMERA",
+            "VIBRATE",
+            "ACCESS_FINE_LOCATION",
+            "ACCESS_COARSE_LOCATION",
+            "CALL_PHONE"
+        ],
+        "platform": "AndroidEmulator",
+        "sdkPath": "/Users/prabhus/Installed_Softwares/adt-bundle/sdk",
+        "versionCode": "1",
+        "versionString": "1.0"
+    },
+    "designerId": "4c4f222a-0e84-4fd3-b5b4-b35ec65f01f8"
+}
